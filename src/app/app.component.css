@@ -1,14 +1,14 @@
 @font-face {
     font-family: 'Jost';
-    src: url(/src/assets/Jost.ttf) ;
+    src: url('../assets/Jost.ttf') ;
   }
 
 @font-face {
     font-family: 'Baloo';
-    src: url('/src/assets/Baloo.ttf') ;
+    src: url('../assets/Baloo.ttf') ;
 }
 
 @font-face {
     font-family: 'Inter';
-    src: url(/src/assets/Inter.ttf);
+    src: url('../assets/Inter.ttf');
 }

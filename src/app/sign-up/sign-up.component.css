@@ -1,18 +1,3 @@
-@font-face {
-    font-family: 'Jost';
-    src: url('../../assets/Jost.ttf') ;
-  }
-
-@font-face {
-    font-family: 'Baloo';
-    src: url('../../assets/Baloo.ttf') ;
-}
-
-@font-face {
-    font-family: 'Inter';
-    src: url('../../assets/Inter.ttf');
-}
-
 .signup_page{
     background-image: url("../../assets/signup_bg.png"); 
     background-size: cover;

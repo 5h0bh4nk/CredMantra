@@ -1,0 +1,41 @@
+.navbar{
+    height: 100px;
+}
+
+.nav_options{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.navbar-collapse{
+    justify-content: flex-end;   
+}
+
+.nav-item{
+    padding: 0 10px;
+}
+
+.nav-item button{
+    padding: 0 10px;
+    width: 180px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 29px;
+    /* identical to box height */
+
+
+    color: #2D427B;
+}
+
+.btn-outline-primary{
+    border-color: #2D427B;
+    color: #2D427B;
+    border-width: 2px;
+}
+
+.nav_options{
+    padding-right: 10%;
+}
