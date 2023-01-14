@@ -1,5 +1,6 @@
 .navbar{
     height: 100px;
+    background-color: white;
 }
 
 .nav_options{
@@ -18,12 +19,12 @@
 
 .nav-item button{
     padding: 0 10px;
-    width: 180px;
+    width: 120px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
-    font-size: 18px;
-    line-height: 29px;
+    /* font-size: 18px;
+    line-height: 29px; */
     /* identical to box height */
 
 

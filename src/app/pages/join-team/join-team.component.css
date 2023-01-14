@@ -1,0 +1,54 @@
+.affiliate{
+    background: url("../../../assets/team_join_bg.png") no-repeat;
+    height: 100%;
+    width: 100vw;
+}
+
+h1{
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 104px;
+    /* identical to box height */
+
+    color: #18337E;
+}
+
+h2{
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 45px;
+    line-height: 97px;
+    /* identical to box height */
+    
+    
+    color: #5C7BD3;
+}
+
+.join_form{
+    background: #FFFFFF;
+    text-align: center;
+}
+
+.form-group{
+    padding: 2%;
+    margin: auto;
+}
+
+h3{
+    padding-top: 5%;
+    font-family: 'Jost';
+    font-style: normal;
+}
+
+.affiliate_form{
+    margin-top: 5%;
+}
+
+button{
+    margin-top: 2%;
+    font-family: 'Jost';
+    font-style: normal;
+}

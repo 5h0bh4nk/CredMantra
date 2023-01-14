@@ -1,0 +1,22 @@
+<app-navbar></app-navbar>
+<div *ngIf="current_stage===stages.otp_verification">
+    <div class="row loan_page">
+        <div class="col-md-5 loan_image">
+            <img src="../../../assets/short_term_loan.png" alt="loan" />
+        </div>
+        <div class="col-md-7 loan_form">
+            <h3> Apply for Short Term Loan </h3>
+            <br>
+            <form>
+                <div class="form-group">
+                    <label id="number_label" for="mobileNumber">Mobile Number</label>
+                    <input type="number" class="form-control"  placeholder="+91XXXXXXXXXX">
+                </div>
+            </form>
+            <button type="submit" class="btn btn-primary">Proceed</button>
+        </div>
+    </div>
+</div>
+<div *ngIf="current_stage===stages.offer_details">
+    <app-companies-page></app-companies-page>
+</div>

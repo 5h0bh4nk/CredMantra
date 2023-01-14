@@ -1,0 +1,82 @@
+.title{
+    text-align: center;
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 1000;
+    padding: 2% 0%;
+    color: #4669CA;
+}
+
+.category_title{
+    background: #4669CA;
+    padding: 2% 5%;
+    margin: 5%;
+}
+
+#text_white{
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 500;
+    /* font-size: 20px;
+    line-height: 29px; */
+
+    color: #FFFFFF;
+}
+
+#text_purple{
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 500;
+    /* font-size: 20px;
+    line-height: 29px; */
+
+    color: #2D427B;
+}
+
+ul{
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li{
+    background: #EEF8F0;
+    padding: 2% 5%;
+    margin: 5%;
+    text-align: center;
+    align-items: flex-start;
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 400;
+    /* font-size: 25px;
+    line-height: 36px; */
+
+    color: #000000;
+}
+
+th{
+    width: 5%;
+    background: #4669CA;
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 500;
+    /* font-size: 30px;
+    line-height: 43px; */
+
+    color: #FFFFFF;
+}
+
+tr{
+    background: #EEF8F0;
+}
+
+table{
+    padding: 2%;
+    margin: 0;
+}
+
+button{
+    background: #E73B3B;
+    border-radius: 10px;
+    color: #FFFFFF;
+    border-color: #E73B3B;
+}

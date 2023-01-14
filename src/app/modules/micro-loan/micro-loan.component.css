@@ -1,0 +1,108 @@
+.loan_image{
+    background: #18337E;
+    display: flex;
+    justify-content: center;
+}
+
+.loan_page{
+    justify-content: center;
+    padding: 10%;
+}
+
+.loan_image img{
+    width: 100%;
+    height:fit-content;
+}
+
+.loan_box{
+    padding: 0px;
+    border: solid;
+    border-color: #18337E;
+    display: flex;
+    height: auto;
+}
+
+.loan_form{
+    padding: 30px;
+    text-align: center;
+    border: solid;
+    border-color: #18337E;
+}
+
+h3{
+    padding-left: 30px;
+
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 45px;
+    color: #18337E;
+}
+
+ul{
+    list-style-image: url('../../../assets/check-mark.png');
+    padding-left: 20%;
+}
+
+li{
+    text-align: left;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    list-style-position: inside;
+    /* identical to box height */
+
+    color: #000000;
+}
+
+.form-group{
+    padding-left: 20%;
+    padding-bottom: 5%;
+    padding-right: 15%;
+}
+
+#number_label{
+    display: flex;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+
+    color: #18337E;
+}
+
+button{
+    background: #18337E;
+    border-radius: 15px;
+    width: fit-content;
+}
+
+.loan_form2{
+    text-align-last: left;
+}
+
+.next_button{
+    display: flex;
+    justify-content: flex-end;
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 22px;
+    /* identical to box height */
+
+
+    color: #FFFFFF;
+}
+
+.btn{
+    color: #FFFFFF;
+}
+
+.mat-mdc-button:not([disabled]){
+    color: #FFFFFF;
+}

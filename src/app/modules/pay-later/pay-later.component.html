@@ -1,0 +1,33 @@
+<div class="container-flex">
+    <div class="row loan_page" *ngIf="current_stage==stages.otp_verification">
+        <div class="col-md-10">
+            <div class="container loan_box">
+                <div class="col-md-5 loan_image">
+                    <img src="../../../assets/pay_later.png" alt="loan" />
+                </div>
+                <div class="col-md-7 loan_form">
+                    <h3> Apply for Pay Later </h3>
+                    <ul>
+                        <div><li> Smart credit limit helps you stay under budget  </li></div>
+                        <div><li> No interest in purchases </li></div>
+                        <div><li> No fees when you pay on time </li></div>
+                    </ul>
+                    <br>
+                    <br>
+                    <form>
+                        <div class="form-group">
+                            <label id="number_label" for="mobileNumber">Mobile Number</label>
+                            <input type="number" class="form-control"  placeholder="+91XXXXXXXXXX">
+                        </div>
+                    </form>
+                    <button type="submit" class="btn btn-primary">Proceed</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="current_stage==stages.offer_details">
+        <app-companies-page
+            [active]="component_name"
+        ></app-companies-page>
+    </div>
+</div>

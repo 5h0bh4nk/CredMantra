@@ -1,0 +1,55 @@
+<div class="container-flex">
+    <div class="row title">
+        <h1><b> {{ heading }} </b></h1>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="category">
+                <div class="category_title">
+                    <span id="text_white">Loan Category </span>
+                    <span id="text_purple"> > View Offers </span>
+                </div>
+                <ul>
+                    <li *ngFor="let category of categories">
+                        <a>{{ category.name }}</a>
+                    </li>
+                </ul>
+            </div>
+        </div> 
+        <div class="col-md-8">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                <th scope="col">OFFERS</th>
+                <th scope="col">DURATION</th>
+                <th scope="col">MAX AMOUNT</th>
+                <th scope="col">INTEREST</th>
+                <th scope="col">PROCEED</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                <td>1</td>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td><button>APPLY NOW</button></td>
+                </tr>
+                <tr>
+                <td>2</td>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+                <td><button>APPLY NOW</button></td>
+                </tr>
+                <tr>
+                <td>3</td>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+                <td><button>APPLY NOW</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

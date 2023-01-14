@@ -1,0 +1,154 @@
+<div class="container-flex">
+    <div class="row loan_page">
+        <div class="col-md-10">
+            <div class="container loan_box">
+                <div class="col-md-5 loan_image">
+                    <img src="../../../assets/credit_card.png" alt="loan" />
+                </div>
+                <div *ngIf="current_stage===stages.otp_verification" class="col-md-7 loan_form">
+                    <h3> Apply for Credit Card </h3>
+                    <ul>
+                        <div><li> Get best credit card for all your needs  </li></div>
+                        <div><li> Get instant credit approval </li></div>
+                        <div><li> Compare the benefits of different cards </li></div>
+                    </ul>
+                    <br>
+                    <br>
+                    <form>
+                        <div class="form-group">
+                            <label id="number_label" for="mobileNumber">Mobile Number</label>
+                            <input type="number" class="form-control"  placeholder="+91XXXXXXXXXX">
+                        </div>
+                    </form>
+                    <button type="submit" class="btn btn-primary">Get OTP</button>
+                </div>
+
+                <div *ngIf="current_stage===stages.personal_details" class="col-md-7 loan_form2">
+                    <h3> Credit Card Application </h3>
+                    <mat-stepper labelPosition="bottom" #stepper>
+                    <mat-step [stepControl]="firstFormGroup" [editable]="isEditable">
+                        <ng-template matStepLabel>Personal Details</ng-template>
+                        <form>
+                        <div class="row">
+                            <div class="col">
+                            <input type="text" class="form-control" placeholder="Name">
+                            </div>
+                            <div class="col">
+                            <input type="text" class="form-control" placeholder="Gender">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col">
+                            <input type="text" class="form-control" placeholder="Email ID">
+                            </div>
+                            <div class="col">
+                            <input type="text" class="form-control" placeholder="Loan Required">
+                            </div>
+                        </div>
+                        </form>
+                        <br>
+                        <mat-divider></mat-divider>
+                        <br>
+                        <div class="next_button">
+                        <button class="btn btn-primary" mat-button matStepperNext>Save and Next > </button>
+                        </div>		
+                    </mat-step>
+                    <mat-step [stepControl]="secondFormGroup" [editable]="isEditable">
+                        <ng-template matStepLabel>Employment Details</ng-template>
+                        <h4> Employment Type </h4>
+                        <form>
+                        <div class="row">
+                            <div class="col">
+                            <input type="text" class="form-control" placeholder="Salaried">
+                            </div>
+                            <div class="col">
+                            <input type="text" class="form-control" placeholder="Self Employed">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col">
+                            <input type="text" class="form-control" placeholder="Self Employed Business">
+                            </div>
+                            <div class="col">
+                            <input type="text" class="form-control" placeholder="Others">
+                            </div>
+                        </div>
+                        </form>
+                        <br>
+                        <mat-divider></mat-divider>
+                        <br>
+                        <h4> Income </h4>
+                        <form>
+                        <div class="row">
+                            <div class="col">
+                            <input type="text" class="form-control" placeholder="Upto 3 lacs">
+                            </div>
+                            <div class="col">
+                            <input type="text" class="form-control" placeholder="3-4 lacs">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col">
+                            <input type="text" class="form-control" placeholder="4-5 lacs">
+                            </div>
+                            <div class="col">
+                            <input type="text" class="form-control" placeholder="5 lacs">
+                            </div>
+                        </div>
+                        </form>
+                        <br>
+                        <mat-divider></mat-divider>
+                        <br>
+                        <div class="next_button">
+                        <button class="btn btn-primary" mat-button matStepperNext>Save and Next > </button>
+                        </div>
+                    </mat-step>
+                    <mat-step [editable]="isEditable">
+                        <ng-template matStepLabel>Current Address</ng-template>
+                        <form>
+                        <div class="row">
+                            <div class="col">
+                            <input type="text" class="form-control" placeholder="Pincode">
+                            </div>
+                            <div class="col">
+                            <input type="text" class="form-control" placeholder="City">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col">
+                            <input type="text" class="form-control" placeholder="State">
+                            </div>
+                            <div class="col">
+                            <input type="text" class="form-control" placeholder="Residential Type">
+                            </div>
+                        </div>
+                        </form>
+                        <br>
+                        <mat-divider></mat-divider>
+                        <br>
+                        <div class="next_button">
+                            <button class="btn btn-primary" mat-button matStepperNext> GET A CALL > </button>
+                        </div>
+                    </mat-step>
+                    <mat-step [editable]="isEditable">
+                        <ng-template matStepLabel>Done</ng-template>
+                        <h2><b>Thank you for applying</b></h2>
+                        <p>your application is successfully submitted.our team will get back to you 24 hours </p>
+                        <mat-divider></mat-divider>
+                        <br>
+                        <div class="next_button">
+                            <button class="btn btn-primary" mat-button matStepperNext> &lt; back to home  </button>
+                        </div>
+                    </mat-step>
+                    </mat-stepper>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
