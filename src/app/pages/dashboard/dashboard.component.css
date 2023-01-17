@@ -1,0 +1,76 @@
+.categories{
+    background: #D9DBFF;
+    height: 100;
+    padding: 5%;
+}
+
+.categories h1{
+    font-family: 'Baloo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 58px;
+    line-height: 91px;
+
+    color: #474CC9;
+    /* border-style: solid; */
+}
+
+.cibil{
+    background: rgba(18, 25, 197, 0.6);
+    color: #FFFFFF;
+    height: 100vh;
+    padding: 2%;
+    padding-top: 5%;
+}
+
+.micro{
+    padding: 5%;
+}
+
+.micro h2{
+    color: #72CC87;
+}
+
+.micro h3{
+    color: #72CC87;
+}
+
+.plater{
+    padding: 5%;
+}
+
+.plater h2{
+    color: #64C7C7;
+}
+
+.ccard{
+    padding: 5%;
+}
+
+.ccard h2{
+    color: #F6416C;
+}
+
+.ploan{
+    padding: 5%;
+}
+
+.ploan h2{
+    color: #6941BC;
+}
+
+.box{
+    background : #FFFFFF;
+    border-radius: 10px;
+    padding: 2%;
+    margin: 10px;
+}
+
+.center{
+    text-align: center;
+}
+
+button{
+    background: #EE5253;
+    color: #FFFFFF;
+}

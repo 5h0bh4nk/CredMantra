@@ -22,6 +22,10 @@ import { CompaniesPageComponent } from './pages/companies-page/companies-page.co
 import { ApplicationFormComponent } from './pages/application-form/application-form.component';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 import { JoinTeamComponent } from './pages/join-team/join-team.component';
+import { BlogComponent } from './pages/blog/blog.component';
+import { TeamPageComponent } from './pages/team-page/team-page.component';
+import { NgxPageScrollModule } from 'ngx-page-scroll';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -36,9 +40,13 @@ import { JoinTeamComponent } from './pages/join-team/join-team.component';
     CompaniesPageComponent,
     ApplicationFormComponent,
     ContactPageComponent,
-    JoinTeamComponent
+    JoinTeamComponent,
+    BlogComponent,
+    TeamPageComponent,
+    DashboardComponent
   ],
   imports: [
+    NgxPageScrollModule,
     MatStepperModule,
     MatDividerModule,
     MatButtonModule,

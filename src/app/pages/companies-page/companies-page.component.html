@@ -11,7 +11,10 @@
                 </div>
                 <ul>
                     <li *ngFor="let category of categories">
-                        <a>{{ category.name }}</a>
+                        <a>
+                            <b *ngIf="category.component==active">{{ category.name }}</b>
+                            <div *ngIf="category.component!=active">{{ category.name }}</div>
+                        </a>
                     </li>
                 </ul>
             </div>

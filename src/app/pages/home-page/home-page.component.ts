@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-home-page',
@@ -7,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class HomePageComponent {
 
+  constructor(private router: Router) {}
+
+  goToScreen2() {
+    document.getElementById("screen2")!.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest"
+    });
+  }
 }

@@ -6,6 +6,7 @@
 
 .loan_page{
     justify-content: center;
+    padding: 10%;
 }
 
 .loan_image img{
@@ -24,6 +25,8 @@
 .loan_form{
     padding: 30px;
     text-align: center;
+    border: solid;
+    border-color: #18337E;
 }
 
 h3{

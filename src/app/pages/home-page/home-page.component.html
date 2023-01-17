@@ -9,17 +9,17 @@
           <p> 
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
             ut labore et dolore magna aliqua. Ut enim a
-            d minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+            d minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
           </p>
-            <button class="btn btn-primary start">Get Started</button>
-            <button class="btn btn-primary explore">Explore</button>
+            <a routerLink="/signup" class="btn btn-primary start">Get Started</a>
+            <a (click)="goToScreen2()" class="btn btn-primary explore">Explore</a>
         </div>
         <div class="col-md-6 page_1" style="text-align: center;">
           <img src="../../../assets/home_page_anim.png">
         </div>
       </div>
     </div>
-    <div class="screen_2">
+    <div class="screen_2" id="screen2">
         <div class="row frame_up">
             <img src="../../../assets/up_frame.png">
         </div>

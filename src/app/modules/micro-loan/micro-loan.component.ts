@@ -13,6 +13,7 @@ enum stage{
 })
 export class MicroLoanComponent {
   stages: typeof stage = stage;
+  component_name="micro-loan";
   current_stage: stage = stage.otp_verification;
   firstFormGroup = this._formBuilder.group({
     firstCtrl: ['', Validators.required],
@@ -24,4 +25,8 @@ export class MicroLoanComponent {
   isEditable = true;
 
   constructor(private _formBuilder: FormBuilder) {}
+
+  proceedToCompanies(){
+    this.current_stage = stage.offer_details;
+  }
 }

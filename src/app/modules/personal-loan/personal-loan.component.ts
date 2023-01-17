@@ -16,7 +16,7 @@ enum stage{
 
 export class PersonalLoanComponent {
   stages: typeof stage = stage;
-  current_stage: stage = stage.personal_details;
+  current_stage: stage = stage.otp_verification;
   firstFormGroup = this._formBuilder.group({
     firstCtrl: ['', Validators.required],
   });
