@@ -16,7 +16,8 @@ enum stage{
 
 export class CreditCardComponent {
   stages: typeof stage = stage;
-  current_stage: stage = stage.personal_details;
+  current_stage: stage = stage.otp_verification;
+  
   firstFormGroup = this._formBuilder.group({
     firstCtrl: ['', Validators.required],
   });
@@ -27,4 +28,8 @@ export class CreditCardComponent {
   isEditable = true;
 
   constructor(private _formBuilder: FormBuilder) {}
+
+  verifyNumber(){
+    this.current_stage = stage.personal_details;
+  }
 }

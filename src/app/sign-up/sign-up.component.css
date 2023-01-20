@@ -1,7 +1,7 @@
 .signup_page{
     background-image: url("../../assets/signup_bg.png"); 
     background-size: cover;
-    height: 100vh;
+    height: 100;
     width: 100vw;
 }
 
@@ -120,4 +120,9 @@
     line-height: 12px;
 
     color: #4543B1;
+}
+
+#error{
+  color: red;
+  font-size: small;
 }

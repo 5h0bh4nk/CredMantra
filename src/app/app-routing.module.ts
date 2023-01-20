@@ -9,19 +9,65 @@ import { TeamPageComponent } from './pages/team-page/team-page.component';
 import { BlogComponent } from './pages/blog/blog.component';
 import { PayLaterComponent } from './modules/pay-later/pay-later.component';
 import { PersonalLoanComponent } from './modules/personal-loan/personal-loan.component';
+import { AuthGuardService } from './services/auth-guard.service';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { CreditCardComponent } from './modules/credit-card/credit-card.component';
 
 const routes: Routes = [
-  { path: 'home', component: HomePageComponent },
-  { path: 'team', component: TeamPageComponent },
-  { path: 'blog', component: BlogComponent },
-  { path: 'contactUs', component: ContactPageComponent },
-  { path: 'signup', component: SignUpComponent },
-  // { path: 'affiliate', component: JoinTeamComponent},
-  { path: 'short-term-loan', component: MicroLoanComponent},
-  { path: 'pay-later', component: PayLaterComponent},
-  { path: 'personal-loan', component: PersonalLoanComponent},
-  { path: 'dashboard', component: DashboardComponent},
+  {
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full'
+  },
+  { 
+    path: 'home', 
+    component: HomePageComponent 
+  },
+  { 
+    path: 'team', 
+    component: TeamPageComponent 
+  },
+  { 
+    path: 'blog', 
+    component: BlogComponent 
+  },
+  { 
+    path: 'contactUs', 
+    component: ContactPageComponent 
+  },
+  { 
+    path: 'signup',
+     component: SignUpComponent 
+  },
+  { 
+    path: 'affiliate', 
+    component: JoinTeamComponent
+  },
+  { 
+    path: 'short-term-loan', 
+    component: MicroLoanComponent,
+    canActivate: [AuthGuardService]
+  },
+  { 
+    path: 'pay-later', 
+    component: PayLaterComponent,
+    canActivate: [AuthGuardService]
+  },
+  { 
+    path: 'personal-loan', 
+    component: PersonalLoanComponent,
+    canActivate: [AuthGuardService]
+  },
+  { 
+    path: 'credit-card', 
+    component: CreditCardComponent,
+    canActivate: [AuthGuardService]
+  },
+  { 
+    path: 'dashboard', 
+    component: DashboardComponent,
+    canActivate: [AuthGuardService]
+  },
   { path: '**', component: HomePageComponent }
 ];
 

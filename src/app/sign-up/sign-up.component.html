@@ -21,37 +21,37 @@
                 
                     <div class="col-md-12">
                         <p class="description">
-                            <u>SIGN-UP IN CRED MANTRA</u>
+                            <u>SIGN-UP IN CREDMANTRA</u>
                         </p>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-5">
+        <div class="col-md-5" style="display:flex">
             <div class="container signup_box">
                 <div class="row signup_title">
                     <h4 class="title">SIGN UP</h4>
                 </div>
                 <div class="row phone_details">
-                <form class="example-form">
+                <div role="group">
                     <mat-form-field class="example-full-width">
                         <mat-label>Name</mat-label>
-                        <input matInput >
+                        <input matInput [(ngModel)]="name" >
                     </mat-form-field>
 
                     <mat-form-field class="example-full-width">
                         <mat-label>Mobile Number</mat-label>
-                        <input matInput placeholder="+91----------" >
+                        <input matInput placeholder="+91----------" [(ngModel)]="phone">
                     </mat-form-field>
-                </form>
+                </div>
                 <br>
-                <button mat-raised-button color="primary">SEND OTP</button>
+                <button (click)="authenticate()" mat-raised-button color="primary">SEND OTP</button>
+                <div id="error"></div>
                 <br><br><br>
                     <div class="divider"> or </div>
                 <br><br><br>
-                <button mat-raised-button color="primary">continue with google</button>
+                <button mat-raised-button color="primary" [disabled]="loading">continue with google</button>
                 </div>
-                
             </div>
         </div>
     </div>
@@ -60,14 +60,14 @@
             <div class="card-body">
                 <h5 class="card-title">Verify Mobile Number</h5>
                 <h5 class="card-subtitle mb-2 text-muted">we have sent OTP to +91-xxxxxxxxxx </h5>
-                <form class="otp-form">
+                <div class="otp-form">
                     <mat-form-field class="example-full-width">
                         <mat-label>OTP</mat-label>
-                        <input matInput >
+                        <input matInput [(ngModel)]="otp">
                     </mat-form-field>
-                </form>
+                </div>
                 <h5 class="card-subtitle mb-2 text-muted resend">Did not receive? Resend OTP</h5>
-                <button mat-raised-button color="primary">Submit</button>
+                <button (click)="verifyOTP()" mat-raised-button color="primary">Submit</button>
             </div>
         </div>
     </div>

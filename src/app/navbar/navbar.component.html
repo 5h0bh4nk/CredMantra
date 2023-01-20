@@ -13,7 +13,8 @@
     <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav nav_options">
       <li class="nav-item active">
-        <a routerLink="/home" class="btn btn-outline-primary">Home</a>
+        <a *ngIf="!isLoggedIn" routerLink="/home" class="btn btn-outline-primary">Home</a>
+        <a *ngIf="isLoggedIn" routerLink="/dashboard" class="btn btn-outline-primary">Home</a>
       </li>
       <li class="nav-item">
         <a routerLink="/team" class="btn btn-outline-primary">Our Team</a>
@@ -24,6 +25,11 @@
       <li class="nav-item">
         <a routerLink="/contactUs" class="btn btn-outline-primary">Contact Us</a>
       </li>
+      <li class="nav-item">
+        <a *ngIf="!isLoggedIn" routerLink="/signup" class="btn btn-primary">Sign In</a>
+        <a *ngIf="isLoggedIn" (click)="logout()" class="btn btn-primary">Logout</a>
+      </li>
+      
     </ul>
   </div>
 </nav>

@@ -25,6 +25,8 @@
 
 .micro{
     padding: 5%;
+    /* chnage mouse on hover */
+    cursor: pointer;
 }
 
 .micro h2{
@@ -37,6 +39,8 @@
 
 .plater{
     padding: 5%;
+    /* chnage mouse on hover */
+    cursor: pointer;
 }
 
 .plater h2{
@@ -45,6 +49,8 @@
 
 .ccard{
     padding: 5%;
+    /* chnage mouse on hover */
+    cursor: pointer;
 }
 
 .ccard h2{
@@ -53,6 +59,8 @@
 
 .ploan{
     padding: 5%;
+    /* chnage mouse on hover */
+    cursor: pointer;
 }
 
 .ploan h2{

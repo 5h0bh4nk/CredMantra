@@ -1,7 +1,9 @@
 .screen_1{
   background: linear-gradient(134.9deg, #7367F0 3.15%, #CE9FFC 95.05%);
+  ;
   height: 100;
-  width: 100%;
+  width: 100;
+  padding: 5%;
 }
 
 img{
@@ -20,6 +22,13 @@ img{
 
 
   color: #FFFFFF;
+}
+
+
+@media (max-width: 768px) {
+  .row{
+    text-align: center;
+  }
 }
 
 h2{
@@ -104,6 +113,7 @@ p{
 }
 
 .cards{
+  padding: 2%;
   display: flex;
   justify-content: center;
 }

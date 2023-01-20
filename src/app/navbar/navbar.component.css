@@ -1,6 +1,7 @@
 .navbar{
     height: 100px;
     background-color: white;
+    background-size: auto;
 }
 
 .nav_options{
@@ -27,14 +28,19 @@
     line-height: 29px; */
     /* identical to box height */
 
-
-    color: #2D427B;
 }
 
 .btn-outline-primary{
     border-color: #2D427B;
     color: #2D427B;
     border-width: 2px;
+}
+
+.btn-primary{
+    color: white;
+    border-width: 2px;
+    border-color: #2D427B;
+    background: #2D427B;
 }
 
 .nav_options{

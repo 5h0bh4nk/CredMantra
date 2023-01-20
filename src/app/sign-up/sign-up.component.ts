@@ -1,6 +1,9 @@
+import { DatePipe } from '@angular/common';
 import { Component } from '@angular/core';
-import {FormControl, FormGroupDirective, NgForm, Validators} from '@angular/forms';
+import {FormControl, FormGroup, FormGroupDirective, NgForm, Validators} from '@angular/forms';
 import {ErrorStateMatcher} from '@angular/material/core';
+import { Router } from '@angular/router';
+import { AuthService } from '../services/auth.service';
 
 
 /** Error when invalid control is dirty, touched, or submitted. */
@@ -9,13 +12,6 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
     const isSubmitted = form && form.submitted;
     return !!(control && control.invalid && (control.dirty || control.touched || isSubmitted));
   }
-}
-
-export interface Tile {
-  color: string;
-  cols: number;
-  rows: number;
-  text: string;
 }
 
 @Component({
@@ -30,12 +26,57 @@ export class SignUpComponent {
 
   matcher = new MyErrorStateMatcher();
 
-  tiles: Tile[] = [
-    {text: 'One', cols: 3, rows: 1, color: 'lightblue'},
-    {text: 'Two', cols: 1, rows: 2, color: 'lightgreen'},
-    {text: 'Three', cols: 1, rows: 1, color: 'lightpink'},
-    {text: 'Four', cols: 2, rows: 1, color: '#DDBDF1'},
-  ];
+  otp_sent: boolean = false;
 
-  otp_sent: boolean = true;
+  // details: FormGroup;
+
+  phone: any = '';
+  name: any = '';
+  otp: any = '';
+
+  loading: boolean = false;
+
+  // fetch data from mat-form-field
+
+  constructor(private authService: AuthService, private router: Router, public datepipe: DatePipe) {
+  }
+
+  authenticate() {
+    // send phone number
+    this.loading = true;
+    console.log(this.phone, this.name);
+    this.authService.loginUser({phone: this.phone, name: this.name}).then((response) => {
+      console.log(response);
+      if(response.type == 'success'){
+        this.otp_sent = true;
+      }
+      else{
+        // write an error to screen
+        document.getElementById('error')!.innerHTML = "Some error occured . Kindly retry !";
+      }
+    });
+
+    this.loading = false;
+  }
+
+  // verify otp
+  verifyOTP() {
+    this.loading = true;
+    console.log({phone: this.phone,otp: this.otp})
+    this.authService.verifyOTPAndSignup({phone: this.phone,otp: this.otp})
+    .then((response) =>{
+      console.log(response);
+      if(response.type=='success'){
+        let currentDateTime = new Date();
+        localStorage.setItem('phone', this.phone);
+        localStorage.setItem('user', response.data.userId)
+        localStorage.setItem("jwt_token", response.data.token);
+        // localStorage.setItem("jwt_expiration", )
+        this.router.navigateByUrl('/dashboard');
+      }
+    })
+    this.loading = false;
+  }
+
+  
 }
