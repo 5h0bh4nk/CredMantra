@@ -1,1 +1,25 @@
-<p>team-page works!</p>
+<app-navbar></app-navbar>
+<div class="team">
+    <div class="intro">
+        <h1> OUR TEAM </h1>
+        <p> HELP US ON YOUR QUEST TO MAKE GOOD SOFTWARE EVEN BETTER </p>
+    </div>
+    <div class="images" style="display:flex">
+        <img src="../../../assets/team_1.png" alt="team1" class="team1">
+        <img src="../../../assets/team_2.png" alt="team2" class="team2">
+    </div>
+    <div class="core_team">
+        <h2> OUR CORE TEAM </h2>
+        <div class="row" style="text-align:center;">
+            <div class="col-md-3 core_team_members" *ngFor="let member of team">
+                <img src="{{member.image}}" alt="team1" class="team1">
+                <div class="member_details">
+                    <h4> {{member.name}} </h4>
+                    <p> {{member.position}} </p>
+                    <p> {{member.description}} </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+            
