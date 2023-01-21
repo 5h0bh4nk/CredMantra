@@ -1,2 +1,25 @@
 <app-navbar></app-navbar>
-<h1> Blog Page Works</h1>
+<div class="blog_section">
+    <div class="blog_header">
+        <h3> HELLO ! WELCOME TO </h3>
+        <br>
+        <h1> CREDMANTRA BLOG </h1>
+        <br>
+        <p> 
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim 
+            veniam, quis nostrud exercitation ullamco laboris nisi
+            a commodo consequat. 
+        </p>
+    </div>
+    <div class="blogs">
+        <div *ngFor="let blog of blogs" class="row blog">
+            <div class="col-md-4 blog_image">
+                <img src="{{blog.image}}" alt="">
+            </div>
+            <div class="col-md-8 blog_content">
+                <p> {{blog.description}} </p>
+                <a class="btn btn-primary" href="{{blog.link}}"> Read More </a>
+            </div>
+        </div>
+    </div>
+</div>

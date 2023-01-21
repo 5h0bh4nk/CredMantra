@@ -46,7 +46,7 @@ export class AuthService extends BackendBaseService{
     const token = localStorage.getItem('jwt_token');
     const headers = new HttpHeaders({'Authorization': 'Bearer '+token, 'Content-Type': 'application/json'});
 
-    return this.http_class.post(this.baseURL + Constants.api_version + this.module_url + '/verify-user', {}, {headers: headers})
+    return this.http_class.get(this.baseURL + Constants.api_version + this.module_url + '/verify-user', {headers: headers})
             .toPromise()
             .then(
                 (response) => {

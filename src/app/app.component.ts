@@ -16,7 +16,8 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
       if(this.authService.checkAuthentication()) {
         this.authService.verifyAuthentication().then((response) => {
-          if(response.type != 'success'){
+          if(!response || response.type != 'success'){
+            this.authService.logoutUser();
             this.router.navigate(["/home"]);
           }
         });

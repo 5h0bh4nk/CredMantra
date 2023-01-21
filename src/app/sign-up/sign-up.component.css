@@ -1,8 +1,8 @@
 .signup_page{
     background-image: url("../../assets/signup_bg.png"); 
     background-size: cover;
-    height: 100;
     width: 100vw;
+    overflow-y: hidden;
 }
 
 .nav_bar{
@@ -18,6 +18,13 @@
     width: 80%;
     padding: 30px;
     display: inline-block;
+    margin-bottom: 10%;
+}
+
+@media (max-width: 768px) {
+    .entry_text{
+      text-align: center;
+    }
 }
 
 .entry_text{

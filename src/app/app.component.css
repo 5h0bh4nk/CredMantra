@@ -12,3 +12,8 @@
     font-family: 'Inter';
     src: url('../assets/Inter.ttf');
 }
+
+@font-face {
+    font-family: 'Amiri';
+    src: url('../assets/Amiri.ttf');
+}

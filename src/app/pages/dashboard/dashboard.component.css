@@ -15,12 +15,21 @@
     /* border-style: solid; */
 }
 
+@media screen and (max-width: 768px) {
+    .categories h1{
+        font-size: 40px;
+        line-height: 60px;
+        text-align: center;
+    }
+}
+
 .cibil{
     background: rgba(18, 25, 197, 0.6);
     color: #FFFFFF;
     height: 100vh;
-    padding: 2%;
+    padding: 10%;
     padding-top: 5%;
+    text-align: center;
 }
 
 .micro{
@@ -81,4 +90,8 @@
 button{
     background: #EE5253;
     color: #FFFFFF;
+}
+
+.col-md-5{
+    flex-shrink: unset;
 }

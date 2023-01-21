@@ -160,6 +160,7 @@ p{
 }
 
 .request_form{
+  padding: 5%;
   background: linear-gradient(131.23deg, #FFF6B7 -33.21%, #F6416C 126.94%);
   box-shadow: 11px 10px 4px rgba(0, 0, 0, 0.25);
   border-radius: 58px;
@@ -170,7 +171,8 @@ p{
 }
 
 .screen_4_header{
-  margin-top: 5%;
+  padding: 5%;
+  /* margin-top: 5%; */
   text-align: center;
   font-family: 'Jost';
   font-style: normal;
@@ -227,6 +229,7 @@ p{
   height: 100px;
   background: #FFFFFF;
   border-radius: 20px;
+  margin: 2%;
 }
 
 .partner img{

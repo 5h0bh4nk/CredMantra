@@ -2,6 +2,7 @@
     background: url("../../../assets/team_join_bg.png") no-repeat;
     height: 100%;
     width: 100vw;
+    background-size: cover;
 }
 
 h1{
@@ -27,10 +28,50 @@ h2{
     color: #5C7BD3;
 }
 
+@media (max-width: 600px) {
+    .affiliate{
+        background: url("../../../assets/team_join_bg.png") no-repeat;
+        height: 100;
+        width: 100vw;
+        background-size: cover;
+        text-align: center;
+    }
+    
+    h1{
+        font-family: 'Jost';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 50px;
+        /* identical to box height */
+    
+        color: #18337E;
+    }
+    
+    h2{
+        font-family: 'Jost';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 40px;
+        /* identical to box height */
+        
+        
+        color: #5C7BD3;
+    }
+
+    .join_form{
+        margin: 5%;
+    }
+}
+
 .join_form{
+    flex-shrink: unset;
     background: #FFFFFF;
     text-align: center;
 }
+
+
 
 .form-group{
     padding: 2%;
@@ -51,4 +92,5 @@ button{
     margin-top: 2%;
     font-family: 'Jost';
     font-style: normal;
+    margin-bottom: 5%;
 }
