@@ -14,7 +14,7 @@ enum stage{
 
 export class PayLaterComponent {
   stages: typeof stage = stage;
-  current_stage: stage = stage.otp_verification;
+  current_stage: stage = stage.offer_details;
   firstFormGroup = this._formBuilder.group({
     firstCtrl: ['', Validators.required],
   });

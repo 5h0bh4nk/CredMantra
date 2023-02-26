@@ -12,6 +12,8 @@ import { MatInputModule } from "@angular/material/input";
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatButtonModule} from '@angular/material/button';
 import {MatDividerModule} from '@angular/material/divider';
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CreditCardComponent } from './modules/credit-card/credit-card.component';
 import { MicroLoanComponent } from './modules/micro-loan/micro-loan.component';
@@ -27,6 +29,13 @@ import { TeamPageComponent } from './pages/team-page/team-page.component';
 import { NgxPageScrollModule } from 'ngx-page-scroll';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { DatePipe } from '@angular/common';
+import { SocialLoginModule, SocialAuthServiceConfig } from '@abacritt/angularx-social-login';
+import {
+  GoogleLoginProvider
+} from '@abacritt/angularx-social-login';
+import { CareerComponent } from './pages/career/career.component';
+import { ModalComponent } from './basic_components/modal/modal.component';
+import { FooterComponent } from './basic_components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +53,10 @@ import { DatePipe } from '@angular/common';
     JoinTeamComponent,
     BlogComponent,
     TeamPageComponent,
-    DashboardComponent
+    DashboardComponent,
+    CareerComponent,
+    ModalComponent,
+    FooterComponent
   ],
   imports: [
     NgxPageScrollModule,
@@ -59,9 +71,28 @@ import { DatePipe } from '@angular/common';
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    SocialLoginModule,
+    MatDialogModule,
+    MatProgressSpinnerModule
   ],
-  providers: [DatePipe],
+  providers: [DatePipe, {
+    provide: 'SocialAuthServiceConfig',
+    useValue: {
+      autoLogin: false,
+      providers: [
+        {
+          id: GoogleLoginProvider.PROVIDER_ID,
+          provider: new GoogleLoginProvider(
+            '478692879646-rs69e71fugfgpbh3dior165hhs1vmej2.apps.googleusercontent.com'
+          )
+        }
+      ],
+      onError: (err) => {
+        console.error(err);
+      }
+    } as SocialAuthServiceConfig,
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

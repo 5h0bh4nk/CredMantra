@@ -7,10 +7,17 @@
             loading="lazy"
         />
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" 
+            type="button" 
+            data-toggle="collapse" 
+            data-target="#navbarNav" 
+            aria-controls="navbarNav"  
+            (click)="isCollapsed = !isCollapsed" 
+            aria-label="Toggle navigation"
+    >
         <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
+    <div class="collapse navbar-collapse" id="navbarNav" [ngClass]="{'show': isCollapsed}">
     <ul class="navbar-nav nav_options">
       <li class="nav-item active">
         <a *ngIf="!isLoggedIn" routerLink="/home" class="btn btn-outline-primary">Home</a>
@@ -23,7 +30,7 @@
         <a routerLink="/blog" class="btn btn-outline-primary">Blog</a>
       </li>
       <li class="nav-item">
-        <a routerLink="/career" class="btn btn-outline-primary">Career</a>
+        <a routerLink="/services" class="btn btn-outline-primary">Services</a>
       </li>
       <li class="nav-item">
         <a routerLink="/affiliate" class="btn btn-outline-primary">Affiliate</a>
@@ -31,11 +38,12 @@
       <li class="nav-item">
         <a routerLink="/contactUs" class="btn btn-outline-primary">Contact Us</a>
       </li>
-      <li class="nav-item">
+      <!--li class="nav-item">
         <a *ngIf="!isLoggedIn" routerLink="/signup" class="btn btn-primary">Sign In</a>
         <a *ngIf="isLoggedIn" (click)="logout()" class="btn btn-primary">Logout</a>
-      </li>
-      
+      </li-->
     </ul>
+
+    
   </div>
 </nav>

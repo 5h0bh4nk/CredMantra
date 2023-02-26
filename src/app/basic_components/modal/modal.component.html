@@ -1,0 +1,17 @@
+<div class="card col-12">
+    <div class="card-body">
+        <h5 class="card-title">Verify Mobile Number</h5>
+        <h5 class="card-subtitle mb-2 text-muted">we have sent OTP to +91-{{data.phone}} </h5>
+        <div class="otp-form">
+            <mat-form-field class="example-full-width">
+                <mat-label>OTP</mat-label>
+                <input matInput [(ngModel)]="data.otp">
+            </mat-form-field>
+        </div>
+        <a *ngIf="counter==0" (click)="resendOTP()" class="card-subtitle mb-2 text-muted resend">Did not receive? Resend OTP</a>
+        <p *ngIf="counter>0"> {{minutes}}:{{seconds}} </p>
+        <br>
+        <button (click)="verifyOTP()" mat-raised-button color="primary">Submit</button>
+        <div styl="color:red" *ngIf="error">{{error}}</div>
+    </div>
+</div>

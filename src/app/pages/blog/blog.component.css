@@ -17,6 +17,7 @@ h1{
 {
     h1{
         font-size: 45px;
+        line-height: 50px;
     }
 
     h3{
@@ -25,6 +26,10 @@ h1{
 
     p{
         font-size: 15px;
+    }
+
+    .blog_header{
+        text-align: center;
     }
 }
 

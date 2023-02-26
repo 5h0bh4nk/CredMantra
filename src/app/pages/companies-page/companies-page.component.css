@@ -80,3 +80,11 @@ button{
     color: #FFFFFF;
     border-color: #E73B3B;
 }
+
+@media (max-width: 768px) {
+    .table{
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}

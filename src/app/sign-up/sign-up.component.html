@@ -11,7 +11,7 @@
             </a>
         </div>
     </nav>
-    <div *ngIf="!otp_sent" class="row">
+    <div class="row">
         <div class="col-md-7">
             <div class="container">
                 <div class="row entry_text">
@@ -41,93 +41,25 @@
 
                     <mat-form-field class="example-full-width">
                         <mat-label>Mobile Number</mat-label>
-                        <input matInput placeholder="+91----------" [(ngModel)]="phone">
+                        <input type="tel" maxlength="10" matInput placeholder="----------" [(ngModel)]="phone">
                     </mat-form-field>
                 </div>
                 <br>
-                <button (click)="authenticate()" mat-raised-button color="primary">SEND OTP</button>
+                <button *ngIf="!loading" (click)="authenticate()" mat-raised-button color="primary">SEND OTP</button>
+
+                <div *ngIf="loading" class="spinner">
+                    <mat-spinner class="spinner" diameter="30"></mat-spinner>
+                </div>
+                
                 <div id="error"></div>
                 <br><br><br>
                     <div class="divider"> or </div>
                 <br><br><br>
-                <button mat-raised-button color="primary" [disabled]="loading">continue with google</button>
+                <div style="display:flex;justify-content:center;align-items:center">
+                    <asl-google-signin-button type='standard' size='large' theme="outline" logo_alignment="center" ></asl-google-signin-button>
                 </div>
             </div>
         </div>
     </div>
-    <div *ngIf="otp_sent">
-        <div class="card col-md-4 col-sm-6">
-            <div class="card-body">
-                <h5 class="card-title">Verify Mobile Number</h5>
-                <h5 class="card-subtitle mb-2 text-muted">we have sent OTP to +91-xxxxxxxxxx </h5>
-                <div class="otp-form">
-                    <mat-form-field class="example-full-width">
-                        <mat-label>OTP</mat-label>
-                        <input matInput [(ngModel)]="otp">
-                    </mat-form-field>
-                </div>
-                <h5 class="card-subtitle mb-2 text-muted resend">Did not receive? Resend OTP</h5>
-                <button (click)="verifyOTP()" mat-raised-button color="primary">Submit</button>
-            </div>
-        </div>
-    </div>
-
-            
 </div>
 
-
-<!-- mat-grid-list cols="5" rowHeight="fit">
-    <mat-grid-tile [colspan]="3", [rowspan]="1">
-        <h4>WELCOME</h4>
-    </mat-grid-tile>
-    <mat-grid-tile [colspan]="2" [rowspan]="1">
-        <div class="container signup_box" style="width:400px">
-            <div class="row signup_title">
-                <h4 class="title">SIGN UP</h4>
-            </div>
-
-            <form class="signup-form">
-            <mat-form-field class="example-full-width">
-                <mat-label>Email</mat-label>
-                <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
-                    placeholder="Ex." />
-            </mat-form-field>
-            </form>
-        </div>
-    </mat-grid-tile>
-</mat-grid-list>
-
-    <div class="container">
-        <div class="row">
-        <div class="col-md-7">
-            WELCOME
-        </div>
-        <div class="col-md-5">
-            <div class="container signup_box" style="width:400px">
-                <div class="row signup_title">
-                    <h4 class="title">SIGN UP</h4>
-                </div>
-
-                <form class="signup-form">
-                <mat-form-field class="example-full-width">
-                    <mat-label>Email</mat-label>
-                    <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
-                        placeholder="Ex. pat@example.com">
-                    <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
-                    Please enter a valid email address
-                    </mat-error>
-                    <mat-error *ngIf="emailFormControl.hasError('required')">
-                    Email is <strong>required</strong>
-                    </mat-error>
-                </mat-form-field>
-                <mat-form-field class="example-full-width">
-                    <mat-label>Mobile Number</mat-label>
-                    <input type="number" matInput 
-                        placeholder="+91">
-                </mat-form-field>
-                </form>
-            </div>
-        </div>
-
-
-</div -->

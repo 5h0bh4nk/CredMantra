@@ -9,6 +9,7 @@ import { AuthService } from '../services/auth.service';
 export class NavbarComponent {
 
   isLoggedIn: boolean = false;
+  public isCollapsed = false;
 
   constructor(private authService: AuthService){};
   ngOnInit() {
@@ -18,4 +19,5 @@ export class NavbarComponent {
   logout() {
     this.authService.logoutUser();
   }
+  
 }

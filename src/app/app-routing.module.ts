@@ -12,13 +12,9 @@ import { PersonalLoanComponent } from './modules/personal-loan/personal-loan.com
 import { AuthGuardService } from './services/auth-guard.service';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { CreditCardComponent } from './modules/credit-card/credit-card.component';
+import { CareerComponent } from './pages/career/career.component';
 
 const routes: Routes = [
-  {
-    path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
-  },
   { 
     path: 'home', 
     component: HomePageComponent 
@@ -35,10 +31,10 @@ const routes: Routes = [
     path: 'contactUs', 
     component: ContactPageComponent 
   },
-  { 
-    path: 'signup',
-     component: SignUpComponent 
-  },
+  // { 
+  //   path: 'signup',
+  //    component: SignUpComponent 
+  // },
   { 
     path: 'affiliate', 
     component: JoinTeamComponent
@@ -64,9 +60,13 @@ const routes: Routes = [
     canActivate: [AuthGuardService]
   },
   { 
-    path: 'dashboard', 
+    path: 'services', 
     component: DashboardComponent,
-    canActivate: [AuthGuardService]
+    // canActivate: [AuthGuardService]
+  },
+  {
+    path: 'career',
+    component: CareerComponent
   },
   { path: '**', component: HomePageComponent }
 ];

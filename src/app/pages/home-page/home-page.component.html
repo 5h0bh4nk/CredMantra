@@ -7,15 +7,12 @@
           <h2 class="sub_header">Ranges from 10k to 15L</h2>
           <h2 class="sub_header">with <span>CREDMANTRA</span> </h2>
           <p> 
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-            ut labore et dolore magna aliqua. Ut enim a
-            d minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
           </p>
-            <a routerLink="/signup" class="btn btn-primary start">Get Started</a>
+            <a routerLink="/services" class="btn btn-primary start">Get Started</a>
             <a (click)="goToScreen2()" class="btn btn-primary explore">Explore</a>
         </div>
         <div class="col-md-6 page_1" style="text-align: center;">
-          <img src="../../../assets/home_page_anim.png">
+          <img src="../../../assets/home_page_anim.png" id="screen1_img">
         </div>
       </div>
     </div>
@@ -125,32 +122,6 @@
             </div>
         </div>
     </div>
-    <div class="screen_6">
-        <div class="row">
-            <div class="col-md-4 footer">
-                <img src="../../../assets/logo2.png">
-                <form>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">Feedback</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Feedback">
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
-            </div>
-            <div class="col-md-4 footer">
-                <h3 class="product_header">Contact Us</h3>
-                <p> (+91) 9873553646 </p>
-                <p> xyz,lorem epsum diodre </p>
-                <p> lorem epsum diodre </p>
-                <p> India - 347634 </p>
-            </div>
-            <div class="col-md-4 footer_img">
-                <img src="../../../assets/footer.png" >
-            </div>
-        </div>
-    </div>
+    <app-footer></app-footer>
 </div>
+<button *ngIf="isShow" (click)="gotoTop()">👆</button>

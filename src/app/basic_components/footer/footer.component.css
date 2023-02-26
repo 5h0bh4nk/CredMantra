@@ -1,0 +1,38 @@
+.screen_6{
+    background: #010851;
+  }
+  
+  .footer{
+    text-align: center;
+  }
+  
+  .footer img{
+    width: 250px;
+    height: 100px;
+  }
+  
+  .footer form{
+    padding: 10%;
+    text-align: center;
+  }
+  
+  .footer button{
+    margin: 10%;
+  }
+  
+  .product_header{
+    font-family: 'Jost';
+    font-style: normal;
+    padding-top: 10%;
+    color: #FFFFFF;
+    font-size: large;
+  }
+  
+  .footer_img img{
+    width: -webkit-fill-available;
+    height: auto;
+  }
+
+  p{
+    color: #FFFFFF;
+  }

@@ -53,3 +53,9 @@ h2{
     color: #4543B1;
     
 }
+
+@media (max-width: 768px) {
+    #img2{
+        display: none;
+    }
+}

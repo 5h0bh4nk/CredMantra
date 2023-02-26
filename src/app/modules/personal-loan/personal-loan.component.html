@@ -49,11 +49,19 @@
             <ng-template matStepLabel>Personal Details</ng-template>
             <form>
             <div class="row">
-                <div class="col">
-                <input type="text" class="form-control" placeholder="Name">
+                <div class="col-md-6">
+                <input type="text" class="form-control" placeholder="Name" [(ngModel)]="name">
                 </div>
-                <div class="col">
-                <input type="text" class="form-control" placeholder="Gender">
+                <div class="col-md-6">
+                    <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Gender
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Male</a>
+                        <a class="dropdown-item" href="#">Female</a>
+                    </div>
+                    </div>
                 </div>
             </div>
             <br>
