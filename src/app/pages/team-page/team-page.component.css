@@ -59,3 +59,8 @@ h2{
         display: none;
     }
 }
+
+.team_image {
+    height: 400px;
+    width: 300px;
+}

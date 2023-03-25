@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
+import { teamDetails } from "../../data/team"
 
 export interface TeamMember {
   name: string;
-  position: string;
-  description: string;
-  image: string;
+  role: string;
+  imageLink: string;
 }
 
 @Component({
@@ -13,31 +13,6 @@ export interface TeamMember {
   styleUrls: ['./team-page.component.css']
 })
 export class TeamPageComponent {
-  team: TeamMember[] = [
-    {
-      name: 'John Doe',
-      position: 'CEO',
-      description: 'lorem lorem',
-      image: '../../../assets/team_member.png'
-    },
-    {
-      name: 'John Doe',
-      position: 'CEO',
-      description: 'lorem lorem',
-      image: '../../../assets/team_member.png'
-    },
-    {
-      name: 'John Doe',
-      position: 'CEO',
-      description: 'lorem lorem',
-      image: '../../../assets/team_member.png'
-    },
-    {
-      name: 'John Doe',
-      position: 'CEO',
-      description: 'lorem lorem',
-      image: '../../../assets/team_member.png'
-    }
-  ];
+  team: TeamMember[] = teamDetails;
 
 }

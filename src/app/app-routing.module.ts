@@ -52,12 +52,11 @@ const routes: Routes = [
   { 
     path: 'personal-loan', 
     component: PersonalLoanComponent,
-    canActivate: [AuthGuardService]
   },
   { 
     path: 'credit-card', 
     component: CreditCardComponent,
-    canActivate: [AuthGuardService]
+    // canActivate: [AuthGuardService]
   },
   { 
     path: 'services', 

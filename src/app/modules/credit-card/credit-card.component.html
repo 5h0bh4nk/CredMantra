@@ -1,9 +1,10 @@
-<app-navbar></app-navbar>
+<app-navbar></app-navbar >
 <div class="row loan_page">
     <div class="col-md-5 loan_image">
         <img src="../../../assets/credit_card.png" alt="loan" />
     </div>
-    <div *ngIf="current_stage===stages.otp_verification" class="col-md-7 loan_form">
+    <ng-container [ngSwitch]="true">
+    <div *ngSwitchCase="current_stage===1" class="col-md-7 loan_form">
         <h3> Apply for Credit Card </h3>
         <ul>
                 <div class="row parent">
@@ -19,7 +20,7 @@
                         <img src="../../../assets/check-mark.png" alt="tick" />
                     </div>
                     <div class="col-9 child" style="text-align:left;margin:auto 0;">
-                        Check Loan Amount Eligibility
+                        Check Credit Card Eligibility
                     </div> 
                 </div>
                 <div class="row parent">
@@ -33,38 +34,39 @@
         </ul>
         <br>
         <br>
-        <form>
-            <div class="form-group">
-                <label id="number_label" for="mobileNumber">Mobile Number</label>
-                <input type="number" class="form-control"  placeholder="+91XXXXXXXXXX">
-            </div>
-        </form>
-        <button type="submit" class="btn btn-primary">Get OTP</button>
+        
+        <button on-click="handleProceed()" class="btn btn-primary">Proceed</button>
     </div>
-    <div *ngIf="current_stage===stages.personal_details" class="col-md-7 loan_form">
-        <h3> Personal Loan Application </h3>
+    <div *ngSwitchCase="current_stage===2" class="col-md-7 loan_form">
+    <form [formGroup]="personalDetails">
+        <h3> Credit Card Application </h3>
         <mat-stepper labelPosition="bottom" #stepper>
-        <mat-step [stepControl]="firstFormGroup" [editable]="isEditable">
+        <mat-step [editable]="isEditable">
             <ng-template matStepLabel>Personal Details</ng-template>
-            <form>
+            <div class="col-md-12" style="padding-bottom:10px;">
+                <input type="text" required class="form-control" placeholder="Phone no." id="phone" formControlName="phone">
+            </div>
             <div class="row">
-                <div class="col">
-                <input type="text" class="form-control" placeholder="Name">
+                <div class="col-md-6">
+                <input type="text" required class="form-control" placeholder="Name" id="name" formControlName="name">
                 </div>
-                <div class="col">
-                <input type="text" class="form-control" placeholder="Gender">
+                <div class="col-md-6">
+                    <select formControlName="gender" id="gender">
+                        <option value="male"> Male </option>
+                        <option value="female"> Female </option>
+                        <option value="preferNotSay"> Prefer Not Say </option>
+                    </select>
                 </div>
             </div>
             <br>
             <div class="row">
                 <div class="col">
-                <input type="text" class="form-control" placeholder="Email ID">
+                <input type="email" id="email" formControlName="email" class="form-control" placeholder="Email ID">
                 </div>
                 <div class="col">
-                <input type="text" class="form-control" placeholder="Loan Required">
+                <input type="text" id="amount" formControlName="loan_amount"  class="form-control" placeholder="Loan Required">
                 </div>
             </div>
-            </form>
             <br>
             <mat-divider></mat-divider>
             <br>
@@ -72,51 +74,33 @@
             <button class="btn btn-primary" mat-button matStepperNext>Save and Next > </button>
             </div>		
         </mat-step>
-        <mat-step [stepControl]="secondFormGroup" [editable]="isEditable">
+        <mat-step [editable]="isEditable">
             <ng-template matStepLabel>Employment Details</ng-template>
             <h4> Employment Type </h4>
-            <form>
+            
             <div class="row">
-                <div class="col">
-                <input type="text" class="form-control" placeholder="Salaried">
-                </div>
-                <div class="col">
-                <input type="text" class="form-control" placeholder="Self Employed">
-                </div>
+                <select formControlName="employment_type" id="employment_type">
+                    <option value="salaried"> Salaried </option>
+                    <option value="self_employed"> Self Employed </option>
+                    <option value="self_employed_business"> Self Employed Business </option>
+                    <option value="others"> Others </option>
+                </select>
             </div>
             <br>
-            <div class="row">
-                <div class="col">
-                <input type="text" class="form-control" placeholder="Self Employed Business">
-                </div>
-                <div class="col">
-                <input type="text" class="form-control" placeholder="Others">
-                </div>
-            </div>
-            </form>
-            <br>
+
             <mat-divider></mat-divider>
             <br>
             <h4> Income </h4>
-            <form>
+            
             <div class="row">
-                <div class="col">
-                <input type="text" class="form-control" placeholder="Upto 3 lacs">
-                </div>
-                <div class="col">
-                <input type="text" class="form-control" placeholder="3-4 lacs">
-                </div>
+                <select formControlName="income" id="income">
+                    <option value="upto_3_lacs"> Upto 3 lakhs </option>
+                    <option value="3-4lacs"> 3-4 Lakhs </option>
+                    <option value="4-5lacs"> 4-5 Lakhs </option>
+                    <option value="5lacs+"> More than 5 Lakhs </option>
+                </select>
             </div>
-            <br>
-            <div class="row">
-                <div class="col">
-                <input type="text" class="form-control" placeholder="4-5 lacs">
-                </div>
-                <div class="col">
-                <input type="text" class="form-control" placeholder="5 lacs">
-                </div>
-            </div>
-            </form>
+            
             <br>
             <mat-divider></mat-divider>
             <br>
@@ -126,30 +110,36 @@
         </mat-step>
         <mat-step [editable]="isEditable">
             <ng-template matStepLabel>Current Address</ng-template>
-            <form>
+            
             <div class="row">
                 <div class="col">
-                <input type="text" class="form-control" placeholder="Pincode">
+                <input type="text" formControlName="pincode" class="form-control" placeholder="Pincode">
                 </div>
                 <div class="col">
-                <input type="text" class="form-control" placeholder="City">
+                <input type="text"  formControlName="city" class="form-control" placeholder="City">
                 </div>
             </div>
             <br>
             <div class="row">
                 <div class="col">
-                <input type="text" class="form-control" placeholder="State">
+                <input type="text" formControlName="state" class="form-control" placeholder="State">
                 </div>
                 <div class="col">
-                <input type="text" class="form-control" placeholder="Residential Type">
+                    <select formControlName="residence" id="residence">
+                        <option value="owned by self/spouse"> Owned by self/spouse </option>
+                        <option value="owned by parents/siblings"> Owned by parents/siblings </option>
+                        <option value="paying guests"> Paying guests </option>
+                        <option value="rented with family"> Rented with family </option>
+                        <option value="company provided"> Company Provided </option>
+                    </select>
                 </div>
             </div>
-            </form>
+            
             <br>
             <mat-divider></mat-divider>
             <br>
             <div class="next_button">
-                <button class="btn btn-primary" mat-button matStepperNext> GET A CALL > </button>
+                <button class="btn btn-primary" mat-button matStepperNext type="submit" on-click="onSubmit()"> GET A CALL > </button>
             </div>
         </mat-step>
         <mat-step [editable]="isEditable">
@@ -163,7 +153,7 @@
             </div>
         </mat-step>
         </mat-stepper>
+    </form>
     </div>
+    </ng-container>
 </div>
-
-
