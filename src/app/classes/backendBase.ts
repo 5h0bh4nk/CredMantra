@@ -1,6 +1,6 @@
 export class BackendBaseService {
 
-    baseURL: string = 'http://localhost:4000/api';
+    baseURL: string = 'https://cerdmantra.onrender.com/api/v1';
   
     constructor(){}
 }

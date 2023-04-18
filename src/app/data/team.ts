@@ -35,9 +35,9 @@ export const teamDetails: TeamMember[] = [
         name: "Manas",
         imageLink: "/assets/manas.jpeg"
     },{
-        role: "Backend Developer",
-        name: "Shubhank",
-        imageLink: "/assets/shubhank.jpeg"
+        role: "UI designer",
+        name: "Aayushi",
+        imageLink: "/assets/aayushi.jpeg"
     },{
         role: "Sales Team",
         name: "",

@@ -4,7 +4,7 @@
       <div class="row" style="margin-bottom: 5%;">
         <div class="col-md-6 text">
           <h1 class="header">Avail Instant loan</h1>
-          <h2 class="sub_header">Ranges from 10k to 15L</h2>
+          <h2 class="sub_header">Ranges from 2k to 20L</h2>
           <h2 class="sub_header">with <span>CREDMANTRA</span> </h2>
           <p> 
           </p>
@@ -62,7 +62,7 @@
             </div>
             <div class="col-md-4 request_form" style="margin-top: inherit;">
                 <div class="row">
-                    <h2 class="black">REQUEST A LOAN</h2>
+                    <h2 class="black">REQUEST A CALL</h2>
                 </div>
                 <form class="mob_name">
                     <div class="form-group">
@@ -84,44 +84,56 @@
         <div class="row">
             <h1 class="screen_4_header"> OUR SERVICES </h1>
         </div>
-        <div class="row">
-            <div class="col-md-6 service_text">
-                <p class="dblue">Get your loan approved  within 48 hours </p>
-                <p class="blue">You can choose the loan amount of your choice ranging from 15k to 15L</p>
-                <p class="dblue">We follow minimum documentation process for granting loans</p>
-            </div>
-            <div class="col-md-6 ">
-                <img src="../../../assets/services.png">
+        <div class="row services" >
+            <div class="back_rectangle" *ngFor="let service of ourServices">
+                <div class="front_rectnagle" style="display:flex;flex-direction: column;justify-content: center;text-align: center;">
+                    <img src="{{service.imageLink}}" alt="cred" style="
+                        height: 100px;
+                        width: 100px;
+                        margin: auto;
+                    ">
+                    <br>
+                    <h4 style="margin: auto; font-weight: bolder"> {{service.header}} </h4>
+                    <br>
+                    <p style="margin: auto" class="service_p"> {{service.desc}} </p>
+                </div>            
             </div>
         </div>
+        <br><br>
     </div>
     <div class="screen_5">
         <div class="row">
             <h1 class="screen_5_header"> OUR PARTNERS </h1>
         </div>
         <div class="row partners">
-            <div class="col-md-4 partner">
-                <img src="../../../assets/partner_1.png">
+            <div class="col-md-3 partner">
+                <img src="../../../assets/bajaj.avif">
             </div>
-            <div class="col-md-4 partner">
-                <img src="../../../assets/partner_2.png">
+            <div class="col-md-3 partner">
+                <img src="../../../assets/fullerton.webp">
             </div>
-            <div class="col-md-4 partner">
-                <img src="../../../assets/partner_3.png">
+        <!--/div>
+        <div class="row partners"-->
+            <div class="col-md-3 partner">
+                <img src="../../../assets/lendingkart.jpg">
             </div>
-        </div>
-        <div class="row partners">
-            <div class="col-md-4 partner">
-                <img src="../../../assets/partner_4.png">
-            </div>
-            <div class="col-md-4 partner">
-                <img src="../../../assets/partner_5.png">
-            </div>
-            <div class="col-md-4 partner">
-                <img src="../../../assets/partner_6.png">
+            <div class="col-md-3 partner">
+                <img src="../../../assets/faircent.webp">
             </div>
         </div>
     </div>
+    <div class="screen_6">
+        <div class="row">
+            <h1 class="screen_4_header"> OUR VALUES </h1>
+        </div>
+        <div class="row values">
+            <div *ngFor="let value of values" style="width:300px; height:350px; margin: 50px" >
+                <div class="back">
+                    <img style="width:212px; height:212px;" src="{{value.imageLink}}" alt="value">
+                </div>
+                <h4 style="margin: auto; font-weight: bolder;font-size: 25px; padding: 20px"> {{value.title}} </h4>
+            </div>
+        </div>
     <app-footer></app-footer>
 </div>
 <button *ngIf="isShow" (click)="gotoTop()">👆</button>

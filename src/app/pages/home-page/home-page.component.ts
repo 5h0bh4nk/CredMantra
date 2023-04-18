@@ -1,5 +1,7 @@
 import { Component, HostListener } from '@angular/core';
 import { Router } from "@angular/router";
+import { IServices, services } from 'src/app/data/services';
+import { IValues, values } from 'src/app/data/values';
 
 @Component({
   selector: 'app-home-page',
@@ -9,6 +11,10 @@ import { Router } from "@angular/router";
 export class HomePageComponent {
 
   constructor(private router: Router) {}
+
+  values: IValues[] = values;
+
+  ourServices: IServices[] = services;
 
   goToScreen2() {
     document.getElementById("screen2")!.scrollIntoView({

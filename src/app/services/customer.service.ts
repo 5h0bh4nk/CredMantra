@@ -15,7 +15,27 @@ export class CustomerService extends BackendBaseService{
   createCustomerApplication(body: any) {
     console.log('aagya')
     return this.http_class
-    .post(this.baseURL + Constants.api_version + '/customer' + '/create', body)
+    .post(this.baseURL + '/customer' + '/create', body)
+    .toPromise()
+    .then(
+        (response) => {
+          console.log(response);
+            return response;
+        },
+        (error) => {
+          console.log(error)
+            return {status: 400, message: 'not found'};
+        }
+    )
+    .catch((error) => {
+        console.log(error);
+        return {status: 400, message: 'not found'};
+    });
+  }
+
+  createCustomerQuery(body: any) {
+    return this.http_class
+    .post(this.baseURL + '/customer' + '/query', body)
     .toPromise()
     .then(
         (response) => {

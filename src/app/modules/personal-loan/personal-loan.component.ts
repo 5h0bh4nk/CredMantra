@@ -69,6 +69,7 @@ export class PersonalLoanComponent {
       residence: this.personalDetails.value.residence,
       service: "personal_loan"
     });
+
     console.log(response);
   }
   
