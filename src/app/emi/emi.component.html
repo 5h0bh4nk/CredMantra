@@ -1,0 +1,106 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+    <div class="spacer">
+      <h1>EMI Calculator</h1>
+      <div class="row start">
+        <div class="col-lg-8  col-lg-offset-1">
+          <div class="well">
+  
+            <div class="form-group">
+              <div class="col-md-12" style="margin-bottom: 5%;">
+                <span class="left-title" style="font-weight: bolder; font-family: 'Barlow';">
+                  Loan Amount
+                </span>
+                <input type="text" disabled style="width:44%;float:right;" class="form-control" (blur)="tbupdate(0)"
+                  [(ngModel)]="query.amount" placeholder="Loan Amount" name="pemi.highValue" style="width:30%;float:right;"/>
+              </div>
+              <ngx-slider [(value)]="pemi.value" [options]="poptions" (userChangeEnd)="update()">
+              </ngx-slider>
+            </div>
+  
+            <hr />
+  
+            <div class="form-group">
+              <div class="col-md-12" style="margin-bottom: 5%;">
+                <span class="left-title" style="font-weight: bolder; font-family: 'Barlow';">
+                  Interest Rate
+                </span>
+                <input type="text" disabled style="width:44%;float:right;" class="form-control" (blur)="tbupdate(1)"
+                  [(ngModel)]="query.interest" placeholder="Interest Rate" name="remi.highValue" style="width:30%;float:right;"/>
+              </div>
+              <ngx-slider [(value)]="remi.value" [options]="roptions" (userChangeEnd)="update()">
+              </ngx-slider>
+            </div>
+  
+            <hr />
+  
+            <div class="form-group">
+              <div class="col-md-12" style="margin-bottom: 5%;">
+                <span class="left-title" style="font-weight: bolder; font-family: 'Barlow';">Loan Tenure</span>
+                <input type="text" disabled *ngIf="yrToggel" class="form-control" (blur)="tbupdate(2)"
+                  placeholder="Loan Tenure in Yr" [(ngModel)]="query.tenureYr" style="width:30%;float:right;">
+                <input type="text" disabled *ngIf="!yrToggel" class="form-control" (blur)="tbupdate(3)"
+                  placeholder="Loan Tenure in Mo" [(ngModel)]="query.tenureMo" style="width:30%;float:right;">
+              </div>
+              <!-- <div class="col-md-2">
+                <div class="input-group-append">
+                  <button class="btn btn-outline-secondary" [ngClass]="{'active':yrToggel}"
+                    (click)="yrToggel=true;update()" type="button">Yr</button>
+                  <button class="btn btn-outline-secondary" [ngClass]="{'active':!yrToggel}"
+                    (click)="yrToggel=false;update()" type="button">Mo</button>
+                </div>
+              </div> -->
+              <ngx-slider *ngIf="yrToggel" [(value)]="temi.value" [options]="toptions" (userChangeEnd)="update()">
+              </ngx-slider>
+              <ngx-slider *ngIf="!yrToggel" [(value)]="memi.value" [options]="moptions" (userChangeEnd)="update()">
+              </ngx-slider>
+            </div>
+  
+  
+          </div>
+  
+        </div>
+        <div class="col-lg-2 details">
+          <div class="well">
+  
+            <div class="jusify-center">
+              <h5>
+                Loan EMI
+              </h5>
+              <span class="result">
+                {{result.emi || "--"}}
+              </span>
+            </div>
+  
+            <hr />
+  
+            <div>
+              <h5>
+                Total Interest Payable
+              </h5>
+              <span class="result">
+                {{result.interest || "--"}}
+              </span>
+            </div>
+  
+            <hr />
+            <div>
+              <h5>
+                Total Payment
+              </h5>
+              <h6>
+                (Principal + Interest)
+              </h6>
+              <span class="result">
+                {{result.total || "--"}}
+              </span>
+            </div>
+  
+  
+  
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

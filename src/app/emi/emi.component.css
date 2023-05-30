@@ -1,0 +1,55 @@
+.left-title{
+    font-size: 22px;
+    font-weight: 500;
+    color: black;
+}
+.container{
+    margin-top: 5%;
+}
+.result{
+    font-size: 22px;
+    font-weight: 600;
+}
+h5,h6{
+    color: black;
+    font-size: medium;
+}
+.active{
+    background-color: lightgray;
+}
+.start{
+    margin-top: 5%;
+}
+
+h1{
+    font-size: 35px;
+    font-family: 'Barlow';
+    color: black;
+}
+@media only screen and (max-width: 768px) {
+    h1{
+        font-size: 22px;
+        color: black;
+    }
+
+    .details{
+        display: flex;
+        justify-content: flex-start;
+    }
+   
+}
+@media only screen and (min-width: 992px) {
+    h1{
+        font-size: 35px;
+        /* margin-bottom: -20px;    */
+    }
+
+    .details{
+        display: flex; justify-content: flex-end;
+    }
+}
+
+input{
+    width: 300px;
+}
+

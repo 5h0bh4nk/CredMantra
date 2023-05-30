@@ -1,6 +1,5 @@
-.contact_page{
+/* .contact_page{
     background: url("../../../assets/contact_bg.png") no-repeat;
-    /* height: 100vh; */
     background-size: cover;
 }
 
@@ -40,7 +39,6 @@ label{
     font-weight: 400;
     font-size: 15px;
     line-height: 38px;
-    /* identical to box height */
     
     
     color: #000000;
@@ -54,7 +52,6 @@ button{
     font-weight: 500;
     font-size: 20px;
     line-height: 29px;
-    /* identical to box height */
     
     text-align: center;
     color: #FFFFFF;
@@ -76,7 +73,6 @@ button{
 
 .contact_info_map{
     padding: 2%;
-    /* margin-right: 5%; */
     margin: auto;
     color: #FFFFFF;
     align-items: center;
@@ -90,7 +86,6 @@ button{
     font-family: 'Jost';
     font-style: normal;
     font-weight: 400;
-    /* identical to box height */
     
     
     color: #FFFFFF;
@@ -107,4 +102,150 @@ button{
     .contact_page{
         height: 100;
     }
+} */
+
+@media (max-width: 1000px) {
+    .msg_box{
+        margin: 5%;
+        flex-shrink: inherit;
+    }
+    .contact_page{
+        height: 100;
+    }
+    .row{
+        display: block;
+    }
+}
+
+.centerContent {
+    /* position: absolute; */
+    /* width: 750px;
+    height: 96px; */
+    /* left: 273px;
+    top: 160px; */
+    text-align: center;
+    font-family: 'Barlow';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 80px;
+    line-height: 96px;
+    /* identical to box height */
+    color: #2264E2;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.sub_head {
+    text-align: center;
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 43px;
+    color: #858181;
+    text-align: center;
+}
+
+
+.example-card {
+    height: 261px;
+    /* margin-top: 470px; */
+    width: 250px;
+    margin-bottom: 8px;
+    background-color: white;
+    padding: 12px 60px 0;
+    display: flex;
+    justify-content: space-between;
+    /* margin-left: 2px; */
+
+    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    flex: 1;
+    margin-right: 30px;
+    margin-bottom: 5%;
+
+}
+
+.mat-card {
+    background-color: white;
+}
+
+.mat-card-content {
+    color: black;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    margin: 10%;
+    background: linear-gradient(180deg, white 30%, black 70%);
+    
+}
+
+.mat-mdc-card-content:last-child {
+    padding-bottom: 145px;
+    width: 118px;
+    text-align: center;
+    margin-left: -12px;
+}
+
+.vertical-span {
+    display: block;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.business {
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 36px;
+    color: #2D427B;
+}
+
+.email {
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 19px;
+    /* identical to box height */
+    color: #000000;
+    margin-top: 6px;
+}
+
+.phone {
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 19px;
+    /* identical to box height */
+    color: #000000;
+}
+
+.ml15 {
+    margin-left: -30px;
+}
+
+.center-image {
+    display: block;
+    margin: 0 auto;
+}
+
+
+.horizontal-image {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+
+
+}
+.horizontal-image-email {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+    margin-top: 8px;
+
+
 }

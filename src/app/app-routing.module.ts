@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomePageComponent } from './pages/home-page/home-page.component';
-import { SignUpComponent } from './sign-up/sign-up.component';
+// import { SignUpComponent } from './sign-up/sign-up.component';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 import { JoinTeamComponent } from './pages/join-team/join-team.component';
 import { MicroLoanComponent } from './modules/micro-loan/micro-loan.component';
@@ -13,10 +13,11 @@ import { AuthGuardService } from './services/auth-guard.service';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { CreditCardComponent } from './modules/credit-card/credit-card.component';
 import { CareerComponent } from './pages/career/career.component';
+import { EMIComponent } from './emi/emi.component';
 
 const routes: Routes = [
   { 
-    path: 'home', 
+    path: 'home',
     component: HomePageComponent 
   },
   { 
@@ -66,6 +67,10 @@ const routes: Routes = [
   {
     path: 'career',
     component: CareerComponent
+  },
+  {
+    path: 'emi',
+    component: EMIComponent
   },
   { path: '**', component: HomePageComponent }
 ];

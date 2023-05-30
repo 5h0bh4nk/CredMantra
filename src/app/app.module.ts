@@ -1,10 +1,10 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
-import { SignUpComponent } from './sign-up/sign-up.component';
+// import { SignUpComponent } from './sign-up/sign-up.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { MatFormFieldModule } from "@angular/material/form-field";
@@ -26,7 +26,7 @@ import { ContactPageComponent } from './pages/contact-page/contact-page.componen
 import { JoinTeamComponent } from './pages/join-team/join-team.component';
 import { BlogComponent } from './pages/blog/blog.component';
 import { TeamPageComponent } from './pages/team-page/team-page.component';
-import { NgxPageScrollModule } from 'ngx-page-scroll';
+// import { NgxPageScrollModule } from 'ngx-page-scroll';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { DatePipe } from '@angular/common';
 import { SocialLoginModule, SocialAuthServiceConfig } from '@abacritt/angularx-social-login';
@@ -36,12 +36,15 @@ import {
 import { CareerComponent } from './pages/career/career.component';
 import { ModalComponent } from './basic_components/modal/modal.component';
 import { FooterComponent } from './basic_components/footer/footer.component';
+import { EMIComponent } from './emi/emi.component';
+import { NgxSliderModule } from '@angular-slider/ngx-slider';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
-    SignUpComponent,
+    // SignUpComponent,
     NavbarComponent,
     CreditCardComponent,
     MicroLoanComponent,
@@ -56,10 +59,11 @@ import { FooterComponent } from './basic_components/footer/footer.component';
     DashboardComponent,
     CareerComponent,
     ModalComponent,
-    FooterComponent
+    FooterComponent,
+    EMIComponent
   ],
   imports: [
-    NgxPageScrollModule,
+    // NgxPageScrollModule,
     MatStepperModule,
     MatDividerModule,
     MatButtonModule,
@@ -74,7 +78,9 @@ import { FooterComponent } from './basic_components/footer/footer.component';
     FormsModule,
     SocialLoginModule,
     MatDialogModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    NgxSliderModule,
+    MatCardModule
   ],
   providers: [DatePipe, {
     provide: 'SocialAuthServiceConfig',

@@ -1,5 +1,5 @@
 .loan_image{
-    background: #18337E;
+    background: #303030;
     display: flex;
     justify-content: center;
 }
@@ -17,7 +17,7 @@
 .loan_box{
     padding: 0px;
     border: solid;
-    border-color: #18337E;
+    border-color: #303030;
     display: flex;
     height: auto;
 }
@@ -26,7 +26,7 @@
     padding: 30px;
     text-align: center;
     border: solid;
-    border-color: #18337E;
+    border-color: #303030;
 }
 
 h3{
@@ -37,7 +37,7 @@ h3{
     font-weight: 400;
     font-size: 30px;
     line-height: 45px;
-    color: #18337E;
+    color: #303030;
 }
 
 ul{
@@ -72,11 +72,11 @@ li{
     font-size: 15px;
     line-height: 18px;
 
-    color: #18337E;
+    color: #303030;
 }
 
 button{
-    background: #18337E;
+    background: #303030;
     border-radius: 15px;
     width: fit-content;
 }

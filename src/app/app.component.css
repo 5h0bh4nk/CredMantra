@@ -18,3 +18,13 @@
     font-family: 'Amiri';
     src: url('../assets/Amiri.ttf');
 }
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../assets/Poppins.ttf');
+}
+
+@font-face {
+    font-family: 'Barlow';
+    src: url('../assets/BarlowSemiCondensed-Regular.ttf');
+}

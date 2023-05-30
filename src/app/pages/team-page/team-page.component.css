@@ -64,3 +64,27 @@ h2{
     height: 400px;
     width: 300px;
 }
+
+.header{
+    font-family: 'Barlow';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 67px;
+    line-height: 118px;
+}
+
+.member{
+    height: 300px;
+    margin: 5%;
+    text-align: center;
+    padding: 5%;
+
+    background: #FFFFFF;
+}
+
+.member_img{
+    width: 110px;
+    height: 110px;
+    border-radius: 60px;
+    margin-top: 50px;
+}

@@ -1,5 +1,5 @@
 .categories{
-    background: #D9DBFF;
+    background: #303030;;
     height: 100;
     padding: 5%;
 }
@@ -11,7 +11,7 @@
     font-size: 58px;
     line-height: 91px;
 
-    color: #474CC9;
+    color: white;
     /* border-style: solid; */
 }
 
@@ -24,7 +24,7 @@
 }
 
 .cibil{
-    background: rgba(18, 25, 197, 0.6);
+    background: black;
     color: #FFFFFF;
     height: 100vh;
     padding: 10%;

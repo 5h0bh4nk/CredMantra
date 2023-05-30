@@ -1,5 +1,5 @@
 .screen_6{
-    background: #010851;
+    background: #000000;
   }
   
   .footer{
@@ -35,4 +35,14 @@
 
   p{
     color: #FFFFFF;
+  }
+
+  .footer_{
+    margin-top: 5%;
+  }
+
+  @media (max-width: 768px) {
+    .footer_{
+      text-align: center;
+    }
   }

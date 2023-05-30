@@ -1,6 +1,5 @@
 .screen_1{
-  background: linear-gradient(134.9deg, #7367F0 3.15%, #CE9FFC 95.05%);
-  ;
+  background: black;
   height: 100;
   width: 100;
   padding: 5%;
@@ -13,7 +12,7 @@ img{
 
 .header{
   margin-top: 10%;
-  font-family: 'Inter';
+  font-family: 'Barlow';
   font-style: normal;
   font-weight: 700;
   font-size: 56px;
@@ -25,17 +24,17 @@ img{
 }
 
 h2{
-  font-family: 'Inter';
+  font-family: 'Barlow';
   font-style: normal;
   font-weight: 700;
-  font-size: 40px;
+  font-size: 60px;
   line-height: 60px;
   /* or 126% */
   color: #FFFFFF;
 }
 
 span{
-  color: black;
+  color: #FFCE45;
 }
 
 .text{
@@ -48,30 +47,134 @@ p{
 }
 
 .start{
-  font-family: 'Baloo';
+  display: inline-block;
+  box-sizing: border-box;
+
+  /* position: absolute; */
+  /* width: 231px;
+  height: 76px;
+  left: 142px;
+  top: 628px; */
+  
+  border: 1px solid #FFA1A1;
+
+  font-family: 'Barlow';
   font-style: normal;
-  background: #EB73DE;
-  border-radius: 10px;
-  width: 130px;
-  margin-top: 5%;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 30px;
+
+  color: #FFA1A1;
+
+  padding: 4% 10%;
+  margin-right: 5%;
+  margin-bottom: 5%;
+  /* margin-top: 5%; */
 }
 
 .explore{
-  font-family: 'Baloo';
+  display: inline-block;
+  
+  box-sizing: border-box;
+
+  /* position: absolute; */
+  /* width: 231px;
+  height: 76px;
+  left: 142px;
+  top: 628px; */
+  
+  border: 1px solid #FFCE45;
+
+  font-family: 'Barlow';
   font-style: normal;
-  background: transparent;
-  border-radius: 10px;
-  border: 1.5px solid #FFFFFF;
-  color: #FFFFFF;
-  margin-left: 20px;
-  width: 130px;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 30px;
+
+  color: #FFCE45;
+
+  padding: 4% 10%;
+}
+
+.header_7{
   margin-top: 5%;
+  /* margin-left: 5%; */
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 43px;
+}
+
+.screen_7{
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.products{
+  display: flex;
+  justify-content: center;
+}
+
+.product_items{
+  box-sizing: border-box;
+  align-items: center;
+
+  margin: 2%;
+
+  width: 400px;
+  height: 200px;
+
+  border: 2px solid #2264E2;
+  filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 10px;
+}
+
+.product_item_header{
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 35px;
+  padding: 5%;
+}
+
+.product_p{
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  
+  color: #727272;
 }
 
 .screen_2{
   background: #FFFFFF;
   height: 100;
   width: 100%;
+}
+
+.screen2_header{
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 67px;
+  text-align: center;
+  line-height: 80px;
+}
+
+.screen2_header2{
+  text-align: center;
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 63px;
+  /* identical to box height */
+
+
+  color: #2264E2;
 }
 
 .frame_up{
@@ -143,29 +246,6 @@ p{
   font-style: normal;
   font-weight: 600;
   font-size: 15px;
-}
-
-.screen_3{
-  background: #FFEBB3;
-  box-shadow: 5px 6px 4px rgba(0, 0, 0, 0.25);
-  height: 100;
-  width: 100%;
-}
-
-.request_form{
-  padding: 5%;
-  background: linear-gradient(131.23deg, #FFF6B7 -33.21%, #F6416C 126.94%);
-  box-shadow: 11px 10px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 58px;
-  display: grid;
-  margin-top: inherit;
-  margin-bottom: 30px;
-  align-content: space-around;
-  justify-content: center;
-}
-
-.screen_4{
-  /* position: relative; */
 }
 
 .screen_4_header{
@@ -275,7 +355,7 @@ p{
   height: 245px;
   margin: 30px;
 
-  background: #18337E;
+  background: #303030;
   transform: rotate(7.99deg);
 
   z-index: 1;
@@ -297,7 +377,7 @@ p{
   height: 250px;
 
   background: #FFFFFF;
-  border: 1px solid #18337E;
+  border: 1px solid #303030;
 
   transform: rotate(-7.99deg);
 
@@ -322,4 +402,144 @@ p{
   justify-content: center;
   text-align: center;
   font-size: 30px;
+}
+
+:host {
+  flex: 1;
+}
+
+.carousel {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 0.5em;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* object-fit: cover; */
+  transition: transform 150ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
+  border-radius: 0.5em;
+}
+
+.slide:hover {
+  transform: scale(1.025);
+}
+
+.control {
+  border: none;
+  background-color: transparent;
+  outline: 0;
+ /* position: absolute;
+  */
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.5em;
+  color: white;
+  font-weight: bold;
+  font-size: 3em;
+  user-select: none;
+  height: 100%;
+  opacity: 80%;
+  transition: opacity 150ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
+ /* Position the buttons */
+}
+.control:hover, .control:focus {
+  opacity: 1;
+}
+.control.next {
+  right: 0;
+}
+.control.prev {
+  left: 0;
+}
+/* style the arrows */
+.arrow {
+  display: block;
+  border-left: 0.1em solid white;
+  border-bottom: 0.1em solid white;
+  width: 0.5em;
+  height: 0.5em;
+}
+.arrow.left {
+  transform: rotate(45deg);
+}
+.arrow.right {
+  transform: rotate(225deg);
+}
+
+.container {
+  display: block;
+  height: 100vh;
+  width: 100vw;
+  max-height: 600px;
+  max-width: 750px;
+  padding: 2em 2em 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+}
+.animition-type-selector {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  align-content: center;
+  justify-content: center;
+  color: white;
+  padding-top: 1em;
+}
+.title {
+  user-select: none;
+}
+.button {
+  background: #3f51b5;
+  cursor: pointer;
+  border-radius: 0.3em;
+}
+.title, .button {
+  height: 2.5em;
+  min-width: 4.5em;
+  margin-bottom: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5em 0.7em;
+  transition: background 20ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
+}
+.title:not(:last-child), .button:not(:last-child) {
+  margin-right: 1em;
+}
+.button:hover, .active {
+  background: #2196f3;
+}
+
+.screen_9{
+  margin: 5%;
+}
+
+.screen_9_header{
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 69px;
+  line-height: 75px;
+  margin-bottom: 30px;
+
+  color: #2264E2;
+
+}
+
+.extra{
+  height: 100px;
+  width: auto;
 }

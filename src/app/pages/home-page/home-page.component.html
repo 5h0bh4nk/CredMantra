@@ -3,47 +3,84 @@
     <div class="screen_1">
       <div class="row" style="margin-bottom: 5%;">
         <div class="col-md-6 text">
-          <h1 class="header">Avail Instant loan</h1>
+          <h2 class="sub_header">Avail Instant loan</h2>
           <h2 class="sub_header">Ranges from 2k to 20L</h2>
-          <h2 class="sub_header">with <span>CREDMANTRA</span> </h2>
-          <p> 
-          </p>
-            <a routerLink="/services" class="btn btn-primary start">Get Started</a>
-            <a (click)="goToScreen2()" class="btn btn-primary explore">Explore</a>
+          <h2 class="sub_header">with <span>CredMantra</span> </h2>
+          <div style="margin-top: 10%"> 
+            <a routerLink="/services" class="start">Get Started</a>
+            <a (click)="goToScreen2()" class="explore">Why Cred Mantra</a>
+          </div>
         </div>
         <div class="col-md-6 page_1" style="text-align: center;">
           <img src="../../../assets/home_page_anim.png" id="screen1_img">
         </div>
       </div>
     </div>
+    <div class="screen_7">
+        <h1 class="header_7">Credit Products</h1>
+        <hr>
+        <!-- <div class="row products" > -->
+            <!-- <div class="back_rectangle" *ngFor="let service of ourServices">
+                <div class="front_rectnagle" style="display:flex;flex-direction: column;justify-content: center;text-align: center;">
+                    <img src="{{service.imageLink}}" alt="cred" style="
+                        height: 100px;
+                        width: 100px;
+                        margin: auto;
+                    ">
+                    <br>
+                    <h4 style="margin: auto; font-weight: bolder"> {{service.header}} </h4>
+                    <br>
+                    <p style="margin: auto" class="service_p"> {{service.desc}} </p>
+                </div>            
+            </div> -->
+            <div class="row products">
+                <div class="product_items col-md-4" *ngFor="let service of ourServices">
+                    <div style="display: flex;">
+                        <h1 class="product_item_header">{{service.header}}</h1>
+                        <img src="{{service.imageLink}}" alt="cred" style="
+                            height: 60px;
+                            width: 60px;
+                            margin: auto;
+                        ">
+                    </div>
+                    <p style="margin: auto; padding: 5%;" class="product_p"> {{service.desc}} </p>
+                </div>
+            </div>
+        <!-- </div> -->
+    </div>
+    <br><hr><br>
     <div class="screen_2" id="screen2">
-        <div class="row frame_up">
+        <!-- <div class="row frame_up">
             <img src="../../../assets/up_frame.png">
-        </div>
+        </div> -->
+        <h1 class="screen2_header">We are here to help you for</h1>
+        <h1 class="screen2_header">for every of your needs</h1>
+        <h1 class="screen2_header2">Three Quick steps to get loans</h1>
+
         <div class="row content ">
-            <div class="col-md-3 ">
+            <!-- <div class="col-md-3 ">
                 <h1 class="black" style="padding-top:25%"> THREE QUICK </h1>
                 <h1><span class="pink"> STEPS </span></h1>
                 <h1 class="black"> TO GET LOANS </h1>
-            </div>
-            <div class="col-md-3 cards">
-                <div class="card" style="width: 18rem;">
+            </div> -->
+            <div class="col-md-4 cards">
+                <div class="card" style="width: 21rem;">
                 <img class="card-img-top" src="../../../assets/apply.png" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">EASY APPLY</h5>
                 </div>
                 </div>
             </div>
-            <div class="col-md-3 cards">
-                <div class="card" style="width: 18rem;">
+            <div class="col-md-4 cards">
+                <div class="card" style="width: 21rem;">
                 <img class="card-img-top" src="../../../assets/application.png" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">SIMPLE APPLICATION</h5>
                 </div>
                 </div>
             </div>
-            <div class="col-md-3 cards">
-                <div class="card" style="width: 18rem;">
+            <div class="col-md-4 cards">
+                <div class="card" style="width: 21rem;">
                 <img class="card-img-top" src="../../../assets/connect.png" alt="Card image cap">
                 <div class="card-body">
                     <h5 class="card-title">GET QUICK RESPONSE</h5>
@@ -51,11 +88,12 @@
                 </div>
             </div>
         </div>
-        <div class="row frame_down">
+        <!-- <div class="row frame_down">
             <img src="../../../assets/down_frame.png">
-        </div>
+        </div> -->
     </div>
-    <div class="screen_3">
+    <hr>
+    <!-- <div class="screen_3">
         <div class="row" style="margin-top: 5%;">
             <div class="col-md-6" style="text-align-last: auto;margin-top: inherit;">
                 <img src="../../../assets/rocket.png">
@@ -79,8 +117,8 @@
                 </div>  
             </div>
         </div>
-    </div>
-    <div class="screen_4">
+    </div> -->
+    <!-- <div class="screen_4">
         <div class="row">
             <h1 class="screen_4_header"> OUR SERVICES </h1>
         </div>
@@ -100,8 +138,50 @@
             </div>
         </div>
         <br><br>
+    </div> -->
+    <!-- <div class="screen_8">
+        <div class="carousel">
+            <ng-container *ngFor="let slide of slides; let i = index">
+              <img
+                *ngIf="i === currentSlide"
+                [src]="slide.src"
+                class="slide"
+                [@slideAnimation]="animationType"
+              />
+            </ng-container>
+          
+            
+            <div style="display: flex; margin-top: 30%;margin-bottom: 30%;">
+                <button class="control prev" (click)="onPreviousClick()">
+                <span class="arrow left"></span>
+                </button>
+                <button class="control next" (click)="onNextClick()" style="margin-right: 0;
+                margin-left: auto;">
+                <span class="arrow right"></span>
+                </button>
+            </div>
+        </div>
+    </div> -->
+    <div class="screen_9">
+        <div class="row">
+            <div class="col-md-7 ">
+                <div class="screen_9_header">
+                We provide the best <br>Financial choices to make <br>your life better
+                </div>
+                <p style="color: black; font-size: 23px; line-height: 26px; font-family: 'Barlow';">Scan or Download the credMantra app to get personal  loan , updated credit score and credit card offer.</p>
+                <br>
+                <br>
+                <div>
+                    <img class="extra" src="../../../assets/qr.png" alt="qr" width="100px" height="100px">
+                    <img class="extra" src="../../../assets/stores.png" alt="stores" width="100px" height="100px">
+                </div>
+            </div>
+            <div class="col-md-5" style="display: flex;justify-content: flex-end;">
+                <img src="../../../assets/phones.png" alt="phone">
+            </div>
+        </div>
     </div>
-    <div class="screen_5">
+    <!-- <div class="screen_5">
         <div class="row">
             <h1 class="screen_5_header"> OUR PARTNERS </h1>
         </div>
@@ -112,8 +192,6 @@
             <div class="col-md-3 partner">
                 <img src="../../../assets/fullerton.webp">
             </div>
-        <!--/div>
-        <div class="row partners"-->
             <div class="col-md-3 partner">
                 <img src="../../../assets/lendingkart.jpg">
             </div>
@@ -133,7 +211,7 @@
                 </div>
                 <h4 style="margin: auto; font-weight: bolder;font-size: 25px; padding: 20px"> {{value.title}} </h4>
             </div>
-        </div>
+        </div> -->
     <app-footer></app-footer>
 </div>
 <button *ngIf="isShow" (click)="gotoTop()">👆</button>

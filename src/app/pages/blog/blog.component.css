@@ -1,10 +1,11 @@
 .blog_header{
-    background: url("../../../assets/blog.png");
+    background: black;
     height: 100;
     color: white;
     font-family: 'Amiri';
     font-style: normal;
     padding: 10%;
+    
 }
 
 h1{
@@ -49,7 +50,7 @@ p{
     display: flex;
     margin: 5%;
     /* padding: 5%; */
-    border: 1px solid #18337E;
+    border: 1px solid #303030;
 }
 
 .blog_content{

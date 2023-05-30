@@ -1,8 +1,7 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg">
     <a class="navbar-brand" href="#">
         <img
-            height="90px"
-            style="margin:20px;"
+            style="margin-top:15%;margin-left: 20%;"
             src="../../assets/logo.png"
             alt=""
             loading="lazy"
@@ -19,26 +18,32 @@
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav" [ngClass]="{'show': isCollapsed}">
-    <ul class="navbar-nav nav_options">
+    <ul class="navbar-nav nav_options" style="padding: 0;">
       <li class="nav-item active">
-        <a *ngIf="!isLoggedIn" routerLink="/home" class="btn btn-outline-primary">Home</a>
-        <a *ngIf="isLoggedIn" routerLink="/dashboard" class="btn btn-outline-primary">Dashboard</a>
+        <a *ngIf="!isLoggedIn" routerLink="/home" class="btn">Home</a>
+        <a *ngIf="isLoggedIn" routerLink="/dashboard" class="btn">Dashboard</a>
       </li>
       <li class="nav-item">
-        <a routerLink="/team" class="btn btn-outline-primary">Our Team</a>
+        <a routerLink="/emi" class="btn">Financial Tools</a>
       </li>
       <li class="nav-item">
-        <a routerLink="/blog" class="btn btn-outline-primary">Blog</a>
+        <a routerLink="/services" class="btn">Credit Score</a>
       </li>
       <li class="nav-item">
-        <a routerLink="/services" class="btn btn-outline-primary">Services</a>
+        <a routerLink="/team" class="btn">Our Team</a>
       </li>
       <li class="nav-item">
-        <a routerLink="/affiliate" class="btn btn-outline-primary">Affiliate</a>
+        <a routerLink="/blog" class="btn">Blog</a>
       </li>
       <li class="nav-item">
-        <a routerLink="/contactUs" class="btn btn-outline-primary">Contact Us</a>
+        <a routerLink="/contactUs" class="btn">Contact Us</a>
       </li>
+      <!-- <li class="nav-item">
+        <a routerLink="/affiliate" class="btn">Affiliate</a>
+      </li>
+      <li class="nav-item">
+        <a routerLink="/contactUs" class="btn">Contact Us</a>
+      </li> -->
       <!--li class="nav-item">
         <a *ngIf="!isLoggedIn" routerLink="/signup" class="btn btn-primary">Sign In</a>
         <a *ngIf="isLoggedIn" (click)="logout()" class="btn btn-primary">Logout</a>
