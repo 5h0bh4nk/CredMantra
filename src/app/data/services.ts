@@ -2,44 +2,55 @@ export interface IServices {
     imageLink: string;
     header: string;
     desc: string;
+    link: string;
 }
 
 export const services: IServices[] = [
     {
         imageLink: '/assets/services/credit-card.png',
-        header: 'Credit Cards',
-        desc: 'From 35+ options, choose a card matching your lifestyle and needs .'
+        header: 'Short-term loan',
+        desc: 'From 35+ options, choose a card matching your lifestyle and needs .',
+        link: '/short-term-loan'
+
     }, {
         imageLink: '/assets/services/pl.png',
         header: 'Personal loan',
-        desc: 'select a best offer curated just for you from from a wide choice of banks and NBFC’s'
+        desc: 'select a best offer curated just for you from from a wide choice of banks and NBFC’s',
+        link: '/personal-loan'
     }, {
         imageLink: '/assets/services/ml.png',
-        header: 'Micro Loan',
-        desc: 'Instant small ticket loans to meet your Immediate Cash needs'
+        header: 'Credit-card',
+        desc: 'Instant small ticket loans to meet your Immediate Cash needs',
+        link: '/credit-card'
     }, {
         imageLink: '/assets/services/bl.png',
-        header: 'Business loans',
-        desc: 'Expand your business with loans at low intrest loan rates'
+        header: 'Credit line',
+        desc: 'Expand your business with loans at low intrest loan rates',
+        link: '/credit-line'
     }, {
         imageLink: '/assets/services/cl.png',
-        header: 'Credit line',
-        desc: 'choose from lowest interest rates available for your dream home'
+        header: 'Over-draft',
+        desc: 'choose from lowest interest rates available for your dream home',
+        link: '/over-draft'
     }, {
         imageLink: '/assets/services/tpl.png',
-        header: 'Transfer personal loan',
-        desc: 'Personal Loan'
+        header: 'Paylater',
+        desc: 'Personal Loan',
+        link: '/pay-later'
     }, {
         imageLink: '/assets/services/cs.png',
-        header: 'Cibil Score',
-        desc: 'Check your cibil score '
+        header: 'Instant Loan',
+        desc: 'Check your cibil score ',
+        link: '/short-term-loan'
     }, {
         imageLink: '/assets/services/cp.png',
-        header: 'Card Payments',
-        desc: 'Make your credit card payments'
+        header: 'Balance Transfer',
+        desc: 'Make your credit card payments',
+        link: '/balance-transfer'
     }, {
         imageLink: '/assets/services/pl.png',
-        header: 'Pay later ',
-        desc: 'Make purchases and pay for them over time after an up-front payment.'
+        header: 'Check your loan offer ',
+        desc: 'Make purchases and pay for them over time after an up-front payment.',
+        link: '/personal-loan'
     }
 ]

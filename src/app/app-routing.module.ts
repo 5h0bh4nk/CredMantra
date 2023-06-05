@@ -14,6 +14,12 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { CreditCardComponent } from './modules/credit-card/credit-card.component';
 import { CareerComponent } from './pages/career/career.component';
 import { EMIComponent } from './emi/emi.component';
+import { CreditLineComponent } from './modules/credit-line/credit-line.component';
+import { OverDraftComponent } from './modules/over-draft/over-draft.component';
+import { BalanceTransferComponent } from './modules/balance-transfer/balance-transfer.component';
+import { CustomerSecurityComponent } from './pages/customer-security/customer-security.component';
+import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component';
+import { TermsComponent } from './pages/terms/terms.component';
 
 const routes: Routes = [
   { 
@@ -43,12 +49,12 @@ const routes: Routes = [
   { 
     path: 'short-term-loan', 
     component: MicroLoanComponent,
-    canActivate: [AuthGuardService]
+    // canActivate: [AuthGuardService]
   },
   { 
     path: 'pay-later', 
     component: PayLaterComponent,
-    canActivate: [AuthGuardService]
+    // canActivate: [AuthGuardService]
   },
   { 
     path: 'personal-loan', 
@@ -58,6 +64,10 @@ const routes: Routes = [
     path: 'credit-card', 
     component: CreditCardComponent,
     // canActivate: [AuthGuardService]
+  },
+  {
+    path: 'balance-transfer',
+    component: BalanceTransferComponent
   },
   { 
     path: 'services', 
@@ -71,6 +81,26 @@ const routes: Routes = [
   {
     path: 'emi',
     component: EMIComponent
+  },
+  {
+    path: 'credit-line',
+    component: CreditLineComponent
+  },
+  {
+    path: 'over-draft',
+    component: OverDraftComponent
+  },
+  {
+    path: 'customer-security',
+    component: CustomerSecurityComponent
+  },
+  {
+    path: 'privacy-policy',
+    component: PrivacyPolicyComponent
+  },
+  {
+    path: 'terms-and-conditions',
+    component: TermsComponent
   },
   { path: '**', component: HomePageComponent }
 ];

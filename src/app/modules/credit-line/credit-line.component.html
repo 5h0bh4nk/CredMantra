@@ -1,0 +1,37 @@
+<app-navbar></app-navbar>
+<div >
+    <div class="row loan_page">
+        <div class="col-md-5 loan_image">
+            <img src="../../../assets/short_term_loan.png" alt="loan" />
+        </div>
+        <div class="col-md-7 loan_form" *ngIf="!submitted">
+            <h3> Apply for Credit Line </h3>
+            <br>
+            <form [formGroup]="queryDetails">
+                <div class="form-group">
+                    <label id="number_label" for="name">Full Name ( as per PAN card )</label>
+                    <input type="text" class="form-control" formControlName="name"  placeholder="Full name">
+                </div>
+                <div class="form-group">
+                    <label id="number_label" for="pan">PAN Number</label>
+                    <input type="text" class="form-control" formControlName="pan"  placeholder="PAN">
+                </div>
+                <div class="form-group">
+                    <label id="number_label" for="occupation">Occupation</label>
+                    <input type="text" class="form-control" formControlName="occupation"  placeholder="Occupation">
+                </div>
+                <div class="form-group">
+                    <label id="number_label" for="income">Net Monthly Income</label>
+                    <input type="number" class="form-control" formControlName="income" placeholder="Income">
+                </div>
+                <div class="form-group">
+                    <label id="number_label" for="mobile">Mobile Number</label>
+                    <input type="number" class="form-control" formControlName="mobile" placeholder="+91XXXXXXXXXX">
+                </div>
+            </form>
+            <button type="submit" class="btn btn-primary" (click)="submit()">Submit</button>
+            <div>{{htmlStr}}</div>
+        </div>
+        <div *ngIf="submitted" class="col-md-7 loan_form"><h1>Your details have been submitted . We will contact you soon !</h1></div>
+    </div>
+</div>

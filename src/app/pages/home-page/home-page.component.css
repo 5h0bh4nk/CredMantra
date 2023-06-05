@@ -283,7 +283,7 @@ p{
 }
 
 .screen_5{
-  background: #A29CD2;
+  background: #EEFBFF;;
   height: 100;
   width: 100%;
   display: grid;
@@ -291,15 +291,15 @@ p{
 
 .screen_5_header{
   text-align: center;
-  font-family: 'Jost';
+  font-family: 'Barlow';
   font-style: normal;
   font-weight: 700;
-  font-size: 72px;
-  line-height: 83px;
+  font-size: 50px;
+  line-height: 55px;
   /* identical to box height, or 115% */
   
   
-  color: #FFFFFF;
+  color: #000000;
 }
 
 .partner{

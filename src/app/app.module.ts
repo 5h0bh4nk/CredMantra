@@ -39,6 +39,12 @@ import { FooterComponent } from './basic_components/footer/footer.component';
 import { EMIComponent } from './emi/emi.component';
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
 import {MatCardModule} from '@angular/material/card';
+import { CreditLineComponent } from './modules/credit-line/credit-line.component';
+import { OverDraftComponent } from './modules/over-draft/over-draft.component';
+import { BalanceTransferComponent } from './modules/balance-transfer/balance-transfer.component';
+import { TermsComponent } from './pages/terms/terms.component';
+import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component';
+import { CustomerSecurityComponent } from './pages/customer-security/customer-security.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +66,13 @@ import {MatCardModule} from '@angular/material/card';
     CareerComponent,
     ModalComponent,
     FooterComponent,
-    EMIComponent
+    EMIComponent,
+    CreditLineComponent,
+    OverDraftComponent,
+    BalanceTransferComponent,
+    TermsComponent,
+    PrivacyPolicyComponent,
+    CustomerSecurityComponent
   ],
   imports: [
     // NgxPageScrollModule,

@@ -1,9 +1,56 @@
 <app-navbar></app-navbar>
-<div class="row">
-    <div class="col-md-7 categories">
-        <h1> LOANS CATEGORY </h1>
+<div style="background: black; padding: 10%;">
+    <div class="container" style="text-align: center;">
+        <div class="row" style="font-family: 'Barlow';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 48px;
+        color: #2264E2;
+        display: flex;
+        justify-content: center;">
+            Free CIBIL Score Checker
+        </div>
         <div class="row">
-            <div class="col-md-5 box micro" ><!--(click)="redirectTomicroLoan()"-->
+            <div class="col-md-6">
+                <input class="form-control" type="text" placeholder="First Name" aria-label="default input example">
+            </div>
+            <div class="col-md-6">
+                <input class="form-control" type="text" placeholder="Last Name" aria-label="default input example">
+            </div>
+            <div class="col-md-6">
+                <input class="form-control" type="text" placeholder="Phone Number" aria-label="default input example">
+            </div>
+            <div class="col-md-6">
+                <input class="form-control" type="text" placeholder="PAN" aria-label="default input example">
+            </div>
+            <div class="col-md-6">
+                <input class="form-control" type="text" placeholder="Occupation" aria-label="default input example">
+            </div>
+            <div class="col-md-6">
+                <input class="form-control" type="text" placeholder="Email ID" aria-label="default input example">
+            </div>
+        </div>
+        <div class="row" style="display: flex; justify-content: end;">
+            <button  style="box-sizing: border-box;
+            width: 150px;
+            height: 50px;
+            background: #FFFFFF;
+            border: 1px solid #FFFFFF;
+            color: black;
+            font-family: 'Barlow';
+            font-weight: bolder;
+            font-size: 20px;
+            border-radius: 10px;">Get Report</button>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>
+<!-- <div class="row">
+    <div class="col-md-7 categories">
+        <h1> Free CIBIL Score Checker </h1>
+        <div class="row">
+            <div class="col-md-5 box micro" (click)="redirectTomicroLoan()">
                 <div style="display:flex;justify-content:space-between;">
                     <div>
                         <h2 style="margin-bottom:auto;"> Micro Loan </h2>
@@ -15,7 +62,7 @@
                 </div>
                 <p> Instant small ticket loans to meet your immediate cash need </p>
             </div>
-            <div class="col-md-5 box plater" ><!--(click)="redirectToPayLater()"-->
+            <div class="col-md-5 box plater" (click)="redirectToPayLater()">
                 <div style="display:flex;justify-content:space-between;">
                     <div>
                         <h2 style="margin-bottom:auto;"> Pay Later </h2>
@@ -50,7 +97,8 @@
                 </div>
                 <p> From 20+ options,choose a card matching your lifestyle and needs </p>
            </div>
-        </div>
+        </div> 
+
     </div>
     <div class="col-md-5 cibil">
         <h1> Check your Cibil score in just 2 minutes </h1>
@@ -59,14 +107,14 @@
         <div class="center">
             <img src="../../../assets/cibil.png" alt="cibil" class="img-fluid">
 
-            <form>
+             <form>
                 <div class="form-group">
                     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
                         placeholder="Enter your PAN Number">
                 </div>
             </form>
             <br>
-            <button type="button" class="btn btn-primary">Check Cibil Score</button>   
+            <button type="button" class="btn btn-primary">Check Cibil Score</button> 
         </div>  
     </div>
-</div>
+</div> -->

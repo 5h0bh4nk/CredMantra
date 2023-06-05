@@ -5,7 +5,7 @@
 }
 
 .categories h1{
-    font-family: 'Baloo';
+    font-family: 'Barlow';
     font-style: normal;
     font-weight: 400;
     font-size: 58px;
@@ -13,6 +13,14 @@
 
     color: white;
     /* border-style: solid; */
+}
+
+input{
+    height: 65px;
+}
+
+.form-control{
+    margin: 5%;
 }
 
 @media screen and (max-width: 768px) {
