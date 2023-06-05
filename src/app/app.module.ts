@@ -45,6 +45,7 @@ import { BalanceTransferComponent } from './modules/balance-transfer/balance-tra
 import { TermsComponent } from './pages/terms/terms.component';
 import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component';
 import { CustomerSecurityComponent } from './pages/customer-security/customer-security.component';
+import { InstantLoanComponent } from './modules/instant-loan/instant-loan.component';
 
 @NgModule({
   declarations: [
@@ -72,7 +73,8 @@ import { CustomerSecurityComponent } from './pages/customer-security/customer-se
     BalanceTransferComponent,
     TermsComponent,
     PrivacyPolicyComponent,
-    CustomerSecurityComponent
+    CustomerSecurityComponent,
+    InstantLoanComponent
   ],
   imports: [
     // NgxPageScrollModule,

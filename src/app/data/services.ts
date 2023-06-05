@@ -41,7 +41,7 @@ export const services: IServices[] = [
         imageLink: '/assets/services/cs.png',
         header: 'Instant Loan',
         desc: 'Check your cibil score ',
-        link: '/short-term-loan'
+        link: '/instant-loan'
     }, {
         imageLink: '/assets/services/cp.png',
         header: 'Balance Transfer',

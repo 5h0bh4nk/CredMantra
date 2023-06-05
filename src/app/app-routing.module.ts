@@ -20,6 +20,7 @@ import { BalanceTransferComponent } from './modules/balance-transfer/balance-tra
 import { CustomerSecurityComponent } from './pages/customer-security/customer-security.component';
 import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component';
 import { TermsComponent } from './pages/terms/terms.component';
+import { InstantLoanComponent } from './modules/instant-loan/instant-loan.component';
 
 const routes: Routes = [
   { 
@@ -89,6 +90,10 @@ const routes: Routes = [
   {
     path: 'over-draft',
     component: OverDraftComponent
+  },
+  {
+    path: 'instant-loan',
+    component: InstantLoanComponent
   },
   {
     path: 'customer-security',

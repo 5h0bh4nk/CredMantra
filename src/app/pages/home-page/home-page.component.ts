@@ -127,6 +127,14 @@ export class HomePageComponent implements OnInit{
     });
   }
 
+  goToScreen7() {
+    document.getElementById("screen_7")!.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest"
+    });
+  }
+
   isShow: boolean = false;
   topPosToStartShowing = 100;
 

@@ -5,7 +5,7 @@
             <img src="../../../assets/short_term_loan.png" alt="loan" />
         </div>
         <div class="col-md-7 loan_form" *ngIf="!submitted">
-            <h3> Apply for Credit Line </h3>
+            <h3> Apply for Instant Loan </h3>
             <br>
             <form [formGroup]="queryDetails">
                 <div class="form-group">
@@ -17,8 +17,8 @@
                     <input type="text" class="form-control" formControlName="pan"  placeholder="PAN">
                 </div>
                 <div class="form-group">
-                    <label id="number_label" for="occupation">Occupation</label>
-                    <input type="text" class="form-control" formControlName="occupation"  placeholder="Occupation">
+                    <label id="number_label" for="occupation">Date of Birth</label>
+                    <input type="date" class="form-control" formControlName="dob"  placeholder="Date of Birth">
                 </div>
                 <div class="form-group">
                     <label id="number_label" for="income">Net Monthly Income</label>
@@ -27,6 +27,26 @@
                 <div class="form-group">
                     <label id="number_label" for="mobile">Mobile Number</label>
                     <input type="number" class="form-control" formControlName="mobile" placeholder="+91XXXXXXXXXX">
+                </div>
+                <div class="form-group">
+                    <label id="number_label" for="pincode">Residential Pincode</label>
+                    <input type="number" class="form-control" formControlName="pincode" placeholder="pincode">
+                </div>
+                <div class="form-group">
+                    <label for="itr">ITR filled ?</label>
+                    <br>
+                    <select formControlName="itr" id="itr">
+                        <option value="yes"> Yes </option>
+                        <option value="no" default> No </option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="gst">Have GST number ?</label>
+                    <br>
+                    <select formControlName="gst" id="gst">
+                        <option value="yes" > Yes </option>
+                        <option value="no" default> No </option>
+                    </select>
                 </div>
             </form>
             <button type="submit" class="btn btn-primary" (click)="submit()">Submit</button>
